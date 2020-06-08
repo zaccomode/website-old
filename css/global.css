@@ -3,9 +3,11 @@ body, html {
     height: 100%;
     background-color: #202020;
     background-image: url(../Assets/woodbackgroundblurred.png);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-attachment: fixed;
     box-sizing: border-box;
+    
+    margin: 0px;
 }
 
 
@@ -304,6 +306,10 @@ p, a, li {
 
 @media screen and (max-width: 600px) {
     .text, .embed-image {
-        max-width: 95%;
+        width: 100%;
+    }
+    
+    .container {
+        padding: 20px;
     }
 }
