@@ -192,6 +192,7 @@ p, a, li {
 .nav-social-links {
     display: flex;
     width: 100%;
+    overflow-x: scroll;
 }
 
 .background-image {
