@@ -1,14 +1,14 @@
 /* Custom Fonts */
 @font-face {
     font-family: "Metropolis";
-    src: url("../Assets/fonts/Metropolis-Bold.otf");
+    src: url("../content/fonts/Metropolis-Bold.otf");
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Metropolis";
-    src: url("../Assets/fonts/Metropolis-BoldItalic.otf");
+    src: url("../content/fonts/Metropolis-BoldItalic.otf");
     font-weight: bold;
     font-style: italic;
 }

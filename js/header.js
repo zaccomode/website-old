@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var project1Desc = document.getElementById("project-1-desc");
     
     project1.href = "../projects/gravity.html";
-    project1Img.src = "../Assets/images/gravity/gravity-thumbnail.png";
+    project1Img.src = "../content/images/gravity/gravity-thumbnail.png";
     project1Title.innerHTML = "Gravity";
     project1Desc.innerHTML = "I spent two years working on a mobile game and passion project - here’s how.";
     
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var project2Desc = document.getElementById("project-2-desc");
     
     project2.href = "../projects/morgann.html";
-    project2Img.src = "../Assets/images/morgann-avatar.png";
+    project2Img.src = "../content/images/morgann-avatar.png";
     project2Title.innerHTML = "Morgann";
     project2Desc.innerHTML = "I designed a bot to ruthlessly roast my friends - and so can you.";
     
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var news1Desc = document.getElementById("news-1-desc");
     
     news1.href = "../news/2021-updates.html";
-    news1Img.src = "../Assets/images/2021-image.png";
+    news1Img.src = "../content/images/2021-image.png";
     news1Title.innerHTML = "Moving Into 2021";
     news1Desc.innerHTML = "Wrapping up this  year and beginning the next with some news about my projects.";
     
