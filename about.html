@@ -1,101 +1,268 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- Meta -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="Shea, Brisbane, Program, Programmer, Python, HTML, Unity, Game, Development, Developer, Design, Machine, Learning">
-        <meta name="description" content="I'm a Brisbane-based student delving deep into graphic, game and web design, and far more. My speciality is the intersection between design & code.">
-        <meta name="author" content="Isaac Shea">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- Browser -->
-        <link rel="icon" type="image/png" href="../Assets/favicon.png">
         <title>About | Isaac Shea</title>
+        <link rel="icon" type="image/png" href="./assets/favicon.png">
+        
+        <!-- JS -->
+        <script src="js/index.js"></script>
+        <script src="js/header.js"></script>
         
         <!-- CSS -->
         <script src="https://kit.fontawesome.com/3b3b5c1255.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
         
-        <link rel="stylesheet" href="../css/global.css">
-        
-        <!-- JS -->
-        <script src="../js/main.js"></script>
+        <link rel="stylesheet" href="./css/global.css">
     </head>
     
     <body>
-    
-        <!-- Hero Image -->
-        <header class="hero-image">
-            <img class="hero-logo" src="../Assets/Titles/aboutme.png" alt="Isaac Shea Logo" style="max-height: 7rem">
-        </header>
-        
         <!-- Nav Bar -->
-        <nav class="nav" id="nav">
-            <div class="nav-container">
-                <a href="javascript:void(0);" class="button nav-icon" onclick="openNav()">
-                    <i class="material-icons" style="vertical-align: middle;">menu</i>
+        <nav class="nav">
+            <span class="material-icons-round" id="arrowDown" style="display: none">keyboard_arrow_down</span>
+            <img class="logo-primary" src="../assets/favicon.png">
+            <div class="nav-buttons" id="nav-buttons">
+                <a class="button active" href="about.html">About</a>
+                <a class="button dropdown" id="projectsDropdownButton" onclick="projectsDropdown()">
+                    Projects
+                    <span class="material-icons-round">keyboard_arrow_down</span>
+                </a>
+                <a class="button dropdown" id="newsDropdownButton" onclick="newsDropdown()">
+                    News
+                    <span class="material-icons-round">keyboard_arrow_down</span>
                 </a>
                 
-                <a href="index.html" class="button">Home</a>
-                <a href="about.html" class="button active"> About </a>
-                <a href="projects.html" class="button"> Projects </a>
-                <a href="design.html" class="button"> Design </a>
                 
-                <br>
-                <br>
+                <a class="button dropdown-mobile" href="projects.html">
+                    Projects
+                </a>
+                <a class="button dropdown-mobile" href="newsroom.html">
+                    News
+                </a>
                 
-                <!-- Responsive Social Links --> 
-                <div class="nav-social-links">
-                    <a href="https://github.com/Isaac-Shea" class="button nav-social"> 
-                        <i class="fab fa-github" style="font-size: 20px"></i></a>
-                    <a href="https://www.youtube.com/channel/UC15Ipgy22HdeOEVs_NRmjig?view_as=subscriber" class="button nav-social"> 
-                        <i class="fab fa-youtube" style="font-size: 20px"></i></a>
-                    <a href="https://www.instagram.com/theisaacshea/" class="button nav-social">
-                        <i class="fab fa-instagram" style="font-size: 20px"></i></a>
-                    <a href="https://twitter.com/IsaacShea1" class="button nav-social">
-                        <i class="fab fa-twitter" style="font-size: 20px"></i></a>
-                </div>
+                <a class="button icon">
+                    <span class="material-icons-round" href="javascript:void(0);" onclick="openNav()">drag_handle</span>
+                </a>
             </div>
         </nav>
         
-        <!-- About Me Text -->
-        <div class="container">
-            <div class="text">
-                <p style="text-align: justify">My name is Isaac Shea, and I'm a Brisbane-based student delving deep into graphic, game and web design, and far more. I specialise in the intersection between design and code, so I often work in front-end design.
-                    <br> <br> 
-                    I began my journey back in 2015 on a novice programming site called Scratch, where I designed basic UI and UX examples (not too many games, though, because I wasn't any good). 
-                    <br> <br>
-                    Over the Christmas break of 2016/17, I decided to learn to make a game in Game Maker 2, and actually got started on my first game, Gravity, for which I created all the art, music and code. My journey with Game Maker largely revolved around Gravity, and when Yoyo Games dropped support for Game Maker 2, I was forced to switch to Unity (which I wanted to do anyways).
-                    <br> <br>
-                    From there, I finished up Gravity late 2019, and begun work on my second (and still in development) solo game, Hot Doggerie. For Hot Doggerie, I wanted to focus heavily on building an intuitive interface with refined game mechanics, something I neglected in Gravity.
-                    <br> <br>
-                    This year, however, I have delved into far more than game design. Having become a bit bored (and with too much time on my hands), I jumped into Discord Bot development, creating Morgann to automatically roast a few of my friends, but my ambitions far exceed just this.
-                    <br> <br> 
-                    I am currently working on a brand new bot named Brandonn, that combines Machine Learning and Natural Language Processing into a fantastic package. I'm yet to release more informaiton, so stick around if you want to see that!
-                    <br> <br>
-                    Alongside Morgann and Brandonn, I recently teamed up with the STiBaRC Team to redesign the STiBaRC website, and I am super excited to showcase it soon!
-                    <br><br><br>
-                    If you want to contact me, you can do so through any of the links below, or through my email at <a href="mailto:isaac_shea@icloud.com">isaac_shea@icloud.com</a>
-                </p>
+        <!-- Projects Subnav -->
+        <nav class="subnav" id="projectsSubnav">
+            <a class="button-card" id="project-1">
+                <div class="left">
+                    <img id="project-1-img" src="assets/images/placeholder-imagelarge.png">
+                </div>
+                <div class="right">
+                    <h1 id="project-1-title">Project</h1>
+                    <p id="project-1-desc">Description</p>
+                </div>
+            </a>
+            <a class="button-card" id="project-2">
+                <div class="left">
+                    <img id="project-2-img" src="assets/images/placeholder-imagelarge.png">
+                </div>
+                <div class="right">
+                    <h1 id="project-2-title">Project</h1>
+                    <p id="project-2-desc">Description</p>
+                </div>
+            </a>
+            <a class="button-card" id="project-3">
+                <div class="left">
+                    <img id="project-3-img" src="assets/images/placeholder-imagelarge.png">
+                </div>
+                <div class="right">
+                    <h1 id="project-3-title">Project</h1>
+                    <p id="project-3-desc">Description</p>
+                </div>
+            </a>
+            <a class="button-card" id="project-4">
+                <div class="left">
+                    <img id="project-4-img" src="assets/images/placeholder-imagelarge.png">
+                </div>
+                <div class="right">
+                    <h1 id="project-4-title">Project</h1>
+                    <p id="project-4-desc">Description</p>
+                </div>
+            </a>
+            
+            <div class="button-container">
+                <a class="button active" href="projects.html">
+                    See More
+                </a>
+            </div>
+        </nav>
+        
+        <!-- News Subnav -->
+        <nav class="subnav" id="newsSubnav">
+            <a class="button-card" id="news-1">
+                <div class="left">
+                    <img id="news-1-img" src="assets/images/placeholder-imagelarge.png">
+                </div>
+                <div class="right">
+                    <h1 id="news-1-title">Project</h1>
+                    <p id="news-1-desc">Description</p>
+                </div>
+            </a>
+            
+            <a class="button-card" id="news-2">
+                <div class="left">
+                    <img id="news-2-img" src="assets/images/placeholder-imagelarge.png">
+                </div>
+                <div class="right">
+                    <h1 id="news-2-title">Project</h1>
+                    <p id="news-2-desc">Description</p>
+                </div>
+            </a>
+            
+            <a class="button-card" id="news-3">
+                <div class="left">
+                    <img id="news-3-img" src="assets/images/placeholder-imagelarge.png">
+                </div>
+                <div class="right">
+                    <h1 id="news-3-title">Project</h1>
+                    <p id="news-3-desc">Description</p>
+                </div>
+            </a>
+            
+            <a class="button-card" id="news-4">
+                <div class="left">
+                    <img id="news-4-img" src="assets/images/placeholder-imagelarge.png">
+                </div>
+                <div class="right">
+                    <h1 id="news-4-title">Project</h1>
+                    <p id="news-4-desc">Description</p>
+                </div>
+            </a>
+            
+            <div class="button-container">
+                <a class="button active" href="newsroom.html">
+                    See More
+                </a>
+            </div>
+        </nav>
+        
+        <!-- Full-Page Nav -->
+        <div id="fullPageNav" class="full-page-nav">
+            <a class="button icon">
+                    <span class="material-icons-round" href="javascript:void(0);" onclick="closeNav()">close</span>
+                </a>
+            
+            <div id="navContent" class="nav-content">
+                <a class="button active" href="about.html">About</a>
+                <a class="button" href="projects.html">Projects</a>
+                <a class="button" href="newsroom.html">News</a>
+
+                <div class="social-icons">
+                    <a href="https://github.com/Isaac-Shea" class="button icon" target="_blank"> 
+                        <i class="fab fa-github" style="font-size: 20px"></i></a>
+                    <a href="https://www.youtube.com/channel/UC15Ipgy22HdeOEVs_NRmjig?view_as=subscriber" class="button icon" target="_blank"> 
+                        <i class="fab fa-youtube" style="font-size: 20px"></i></a>
+                    <a href="https://www.instagram.com/theisaacshea/" class="button icon" target="_blank">
+                        <i class="fab fa-instagram" style="font-size: 20px"></i></a>
+                    <a href="https://twitter.com/IsaacShea1" class="button icon" target="_blank">
+                        <i class="fab fa-twitter" style="font-size: 20px"></i></a>
+                </div>
             </div>
         </div>
         
-        <!-- FOOTER - Social Links -->
-        <footer class="container footer">
-            <div class="social-links">
-                <a href="https://github.com/Isaac-Shea" class="button icon"> 
+        <!-- Anchor Indicator -->
+        <div class="anchor-indicator">
+            <p class="subtitle">About //</p>
+            <span class="material-icons-round">account_circle</span>
+        </div>
+        
+        <!-- Page Header -->
+        <header class="header small">
+            <div class="header-halves">
+                <div class="header-left">
+                    <img class="avatar-primary" src="./assets/images/about-header.png"> 
+                </div>
+
+                <div class="header-right">
+                    <div class="header-text">
+                        <h1 class="title">About Me</h1>
+                    </div>
+                    <h1 class="header-background">//</h1>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Page Content -->
+        <main class="page-content">
+            
+            <!-- Intro Content -->
+            <div class="page-section alt border">
+                <div class="section-left">
+                    <h2>I Make Stuff</h2>
+                    <p class="subtitle">That's Cool, Right? //</p>
+                </div>
+                <div class="section-right">
+                    <p>
+                        I’m a Brisbane-based, self-taught graphic design and programming enthusiast. I’ve been making content on the internet since 2015, and have always loved the intersection between technical computing and user experience.
+                        <br>
+                        <br>
+                        I’ve made a game, two Discord bots, multiple websites and various designs, commissions and not. My interests are wide, and I enjoy learning new things. I’m familiar with C#, Python, HTML, CSS, and am working to learn JS and Node.JS.
+
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Story Content -->
+            <div class="page-section border">
+                <div class="section-left alt">
+                    <h2>My Story</h2>
+                    <h1 class="section-background">&lt;/&gt;</h1>
+                </div>
+                <div class="section-right">
+                    <p>
+                        I started making content on the novice programming site Scratch in 2015 with basic interface examples, but after I became bored of that I challenged myself to develop a game over the Christmas break of 2016/17. From there, I began development of my first (and to date only) game, Gravity, 
+                        <br>
+                        <br>
+                        I continued the development of Gravity for nearly 3 years, finishing it in late 2019 (you can read about the whole story HERE). 
+                        <br>
+                        <br>
+                        In 2020, I had far too much time on my hands, being stuck at home and all, and decided to take up learning Python with the sole intention of heartlessly insulting my friends (which you can read about HERE), and found a love for UI & UX design, which I’d like to focus on largely in 2021.
+
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Contact Content -->
+            <div class="page-section alt">
+                <div class="section-left alt">
+                    <h2>Contact Me</h2>
+                    <h1 class="section-background">&lt;/&gt;</h1>
+                </div>
+                <div class="section-right">
+                    <p>
+                        If you’d like to contact me, you can do so through my email (<a href="mailto:isaac_shea@icloud.com">isaac_shea@icloud.com</a>), or by direct messaging any of my social media accounts. I’ll respond to as many genuine communications as I can.
+                    </p>
+                </div>
+            </div>
+            
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-social-icons">
+                <a href="https://github.com/zaccomode" class="button alt icon" target="_blank"> 
                     <i class="fab fa-github" style="font-size: 20px"></i></a>
-                <a href="https://www.youtube.com/channel/UC15Ipgy22HdeOEVs_NRmjig?view_as=subscriber" class="button icon"> 
+                <a href="https://www.youtube.com/channel/UC15Ipgy22HdeOEVs_NRmjig?view_as=subscriber" class="button alt icon" target="_blank"> 
                     <i class="fab fa-youtube" style="font-size: 20px"></i></a>
-                <a href="https://www.instagram.com/theisaacshea/" class="button icon">
+                <a href="https://www.instagram.com/zaccomode/" class="button alt icon" target="_blank">
                     <i class="fab fa-instagram" style="font-size: 20px"></i></a>
-                <a href="https://twitter.com/IsaacShea1" class="button icon">
+                <a href="https://twitter.com/zaccomode" class="button alt icon" target="_blank">
                     <i class="fab fa-twitter" style="font-size: 20px"></i></a>
             </div>
-            <div class="copyright">
-                <h3>© Isaac Shea 2020 | <a href="legal/privacy.html" style="font-family: newYorkRegularItalic; font-size: 12px;">Privacy & Legal</a> </h3>
+            <div class="footer-text">
+                <a href="legal.html">Privacy & Legal</a>
+                <img class="footer-favicon" src="assets/favicon.png">
+                <p>© Isaac Shea, 2020</p>
             </div>
         </footer>
-    
     </body>
-    
 </html>

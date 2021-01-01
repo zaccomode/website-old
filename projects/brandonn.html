@@ -4,12 +4,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- Browser -->
-        <title>Home | Isaac Shea</title>
-        <link rel="icon" type="image/png" href="./assets/favicon.png">
+        <title>Brandonn | Isaac Shea</title>
+        <link rel="icon" type="image/png" href="../assets/favicon.png">
         
         <!-- JS -->
-        <script src="js/index.js"></script>
-        <script src="js/header.js"></script>
+        <script src="../js/index.js"></script>
+        <script src="../js/header.js"></script>
         
         <!-- CSS -->
         <script src="https://kit.fontawesome.com/3b3b5c1255.js" crossorigin="anonymous"></script>
@@ -17,14 +17,15 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
         
-        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="../css/projects.css">
     </head>
     
     <body>
         <!-- Nav Bar -->
         <nav class="nav">
             <span class="material-icons-round" id="arrowDown" style="display: none">keyboard_arrow_down</span>
-            <img class="logo-primary" src="./assets/favicon.png">
+            <img class="logo-primary" src="../assets/favicon.png">
             <div class="nav-buttons" id="nav-buttons">
                 <a class="button" href="about.html">About</a>
                 <a class="button dropdown" id="projectsDropdownButton" onclick="projectsDropdown()">
@@ -90,7 +91,7 @@
             </a>
             
             <div class="button-container">
-                <a class="button active" href="projects.html">
+                <a class="button active" href="../projects.html">
                     See More
                 </a>
             </div>
@@ -139,7 +140,7 @@
             </a>
             
             <div class="button-container">
-                <a class="button active" href="newsroom.html">
+                <a class="button active" href="../newsroom.html">
                     See More
                 </a>
             </div>
@@ -171,27 +172,23 @@
         
         <!-- Anchor Indicator -->
         <div class="anchor-indicator">
-            <p class="subtitle">Home //</p>
-            <span class="material-icons-round">home</span>
+            <p class="subtitle">Brandonn //</p>
+            <span class="material-icons-round">sentiment_very_satisfied</span>
         </div>
         
         <!-- Page Header -->
-        <header class="header">
+        <header class="header small">
             <div class="header-halves">
                 <div class="header-left">
-                    <img class="avatar-primary" src="./assets/avatar.png"> 
+                    <img class="avatar-primary" src="../assets/images/brandonn-avatar.png"> 
                 </div>
 
                 <div class="header-right">
                     <div class="header-text">
-                        <h1 class="title">Isaac Shea</h1>
-                        <p class="subtitle">Overcomplicating Simple Things //</p>
+                        <h1 class="title">Brandonn</h1>
                     </div>
                     <h1 class="header-background">//</h1>
                 </div>
-            </div>
-            <div class="header-prompt">
-                <span class="material-icons-round">keyboard_arrow_down</span>
             </div>
         </header>
         
@@ -199,90 +196,82 @@
         <main class="page-content">
             
             <!-- Intro Content -->
-            <div class="page-section">
+            <div class="page-section alt">
                 <div class="section-left">
-                    <h2>Some Nerd from Brisbane</h2>
-                    <p class="subtitle">Making Stuff for the Internet //</p>
+                    <h2>ML Mastermind</h2>
+                    <p class="subtitle">Written 21 December, 2020 //</p>
                 </div>
                 <div class="section-right">
                     <p>
-                        I've been making content on the internet for half a decade, and have no intention of stopping anytime soon.
-                        <br>
-                        <br>
-                        I've developed bots, websites, interfaces, a game, and now websites. My core philosophy has always been to develop a beautiful and complete experience for every user.
+                        I wanted to revolutionise moderation within Discord servers using the power of Machine Learning and Natural Language Processing - here’s where I failed, and what I learned.
                     </p>
                 </div>
             </div>
             
-            <!-- Intro Projects -->
-            <div class="page-section border">
-                <div class="section-horizontalview">
-                    <div class="card-container">
-
-                        <!-- Morgann Card -->
-                        <div class="card focus">
-                            <div class="card-header">
-                                <img class="card-image" src="assets/images/morgann-avatar.png">
-                                <div class="vertical-text">
-                                    <h4>Morgann</h4>
-                                    <p class="subtitle-small">001 //</p>
-                                </div>
-                            </div>
-                            <p>
-                                Do you ever get tired of heartlessly insulting your friends? I did too, so I designed a bot to do it on my behalf.
-                            </p>
-                            <a class="button active" href="projects/morgann.html">I'm Listening</a>
-                        </div>
-                        
-                        <!-- Gravity Card -->
-                        <div class="card">
-                            <div class="card-header">
-                                <img class="card-image" src="assets/images/gravity.png">
-                                <div class="vertical-text">
-                                    <h4>Gravity</h4>
-                                    <p class="subtitle-small">002 //</p>
-                                </div>
-                            </div>
-                            <p>
-                                You pilot a hot air balloon through a desolate, floating city, desperately avoiding obstacles - here’s how I made <i>Gravity</i>.
-
-                            </p>
-                            <a class="button alt" href="projects/gravity.html">Learn more</a>
-                        </div>
-                        
-                        <!-- Brandonn Card -->
-                        <div class="card">
-                            <div class="card-header">
-                                <img class="card-image" src="assets/images/brandonn-avatar.png">
-                                <div class="vertical-text">
-                                    <h4>Brandonn</h4>
-                                    <p class="subtitle-small">003 //</p>
-                                </div>
-                            </div>
-                            <p>
-                                I tried to revolutionise Discord’s moderation using the power of Machine Learning - here’s where I failed, and what I learned.
-
-                            </p>
-                            <a class="button alt" href="projects/brandonn.html">See How</a>
-                        </div>
-
-                        <!-- Studio Subpar Card -->
-                        <div class="card">
-                            <div class="card-header">
-                                <img class="card-image" src="assets/images/studio-subpar.png">
-                                <div class="vertical-text">
-                                    <h4>Studio Subpar</h4>
-                                    <p class="subtitle-small">004 //</p>
-                                </div>
-                            </div>
-                            <p>
-                                My friends wanted to start streaming on Twitch and YouTube, so I created brandings for everyone to use - this is Studio Subpar.
-                            </p>
-                            <a class="button alt disabled">COMING SOON</a>
-                        </div>
-                    </div>
-                </div>
+            <!-- Main Content -->
+            <div class="page-section content">
+                <p>
+                    To properly explain my ambitions with <i>Brandonn</i>, I should explain one of my largest complaints with modern Discord bots: their methods of interaction. Currently, the only two options for interaction are to type your exact command to the bot as a regular message in Discord, but use a dedicated prefix at the beginning on the message, or to go to a bot’s dedicated web client site where one can interact with some of the bot’s functions in a graphical interface. 
+                    <br>
+                    Neither of these solutions is particularly desirable or achievable for smaller bot developers like myself. Interacting through a way that closely resembles command line is clunky and counter-intuitive, especially on mobile devices with autocorrect, and an entire web-based client is unachievable with a small team just starting out in development. 
+                    <br>
+                    <br>
+                    My ultimate solution to that issue would be to develop an algorithm or tool that could dissect a message sent to pick out the needed information and commands, but allow users to structure the message as if they were sending it to any other person in their server. 
+                    <br>
+                    This solution would solve, or at the least lessen, a number of gaping issues in how bot interaction currently functions:
+                </p>
+                <ol>
+                    <li>  
+                        As I mentioned above, autocorrect on mobile devices are notoriously bad at correcting a sentence to remove the syntax a bot requires to function properly, essentially rendering them unusable on Discord’s mobile client. Additionally, ‘prefix characters’ such as exclamation marks are more difficult to access on mobile keyboards.
+                    </li>
+                    <li>
+                        Often when enough bots are active within a server, an overlap between their prefix characters can occur, which can result in incorrect summons, especially relating to the classic ‘help’ command detailing a bot’s function.
+                    </li>
+                </ol>
+                <p>
+                    These issues played an integral role in the development of the message processing system that drove the development of <i>Brandonn</i> initially, and I structured a significant amount of the design philosophy around essentially ‘humanising’ Discord bots for a better interaction model.
+                    <br>
+                    <br>
+                    I’d started developing a rough version of this system when I rewrote <i>Morgann</i> around April 2020, and in doing so discovered a Pythonic machine learning library specifically built for interpreting English. The Natural Language Toolkit (or NLTK) is a free, open-source library that contains a number of models for dissecting language, and quickly became an integral tool in the development of Morgann and Brandonn. 
+                    <br>
+                    As I explored the library and its capabilities, I discovered a function called Sentiment Analysis, and to say it caught my eye would be an understatement. Sentiment Analysers are machine learning models used to parse a piece of text in an attempt to understand the author’s mood or emotion. 
+                    <br>
+                    In practice, sites such as <a href="http://sentdex.com/" target="_blank">Sentdex</a> have used this to index the sentiment of sites such as Twitter on polarising topics, and in theory analysis like this could be used to develop a profile of any member of a Discord server to understand their mood, then automatically make moderation decisions based on that information. For example, a toxic user would be demoted, warned or even removed from the server for consistent toxic behaviour, and a positive member would be promoted and rewarded for their efforts. 
+                    <br>
+                    Automatic moderation is nothing new in bots - <i>Dyno</i> (a popular moderation bot) can warn or remove members if they use specific trigger words or phrases, but they could never dissect the sentence and attempt to understand the deeper or subtle meaning in sentences.
+                    <br>
+                    <br>
+                    There were a number of other features I had planned to develop for <i>Brandonn</i> that got to varying stages of development before I discontinued him, but they are unimportant and thus I don’t think it’s worth sharing them.
+                    <br>
+                    <br>
+                    Around September this year, I decided to essentially discontinue the development of Brandonn for a few reasons.
+                </p>
+                <ul>
+                    <li>
+                        <b>Personal life:</b> coming up to my final Year 12 exams meant that I had to devote a huge amount of time to study to achieve the results I wanted to, and the chaos that had been 2020 was beginning to take its toll on my mental capacity.
+                    </li>
+                    <li>
+                        <b>Functional failure:</b> the sentiment analysis feature more or less failed after I demonstrated it to a few personal friends, only to be met with concerns over their privacy.
+                    </li>
+                    <li>
+                        <b>Project fatigue:</b> working on Brandonn for 5 months began to fatigue me severely, to the point where I had no motivation to continue developing him. This had more or less solidified my hypothesis that working on large projects for months on end was just not enjoyable for me anymore.
+                    </li>
+                </ul>
+                <p>
+                    The technology I developed to construct <i>Brandonn</i> has been repurposed, despite his discontinuing. The message processing system I developed is now known as <i>Rosetta</i>, and the first version is at work in the <i>Morgann</i> 2021 Rewrite while I work on the second version.
+                    <br>
+                    Eventually, I’d like to release <i>Rosetta</i> to other Pythonic bot developers to use, as I believe it to be a solid step towards semantic bot interaction, but that may be some time off yet. 
+                    <br>
+                    <br>
+                    The sentiment analysis technology will remain unused in my future projects at this stage, however. I realised that, on top of potentially infringing on people’s perception of privacy, the idea of denoting a member’s entire worth within a server to their positivity or toxicity, especially as a single number, is troublesome; it promotes a two-dimensional view of other people I personally don’t support, so I didn’t want to promote the idea to other people, especially those in moderative positions.
+                    <br>
+                    <br>
+                    I consider <i>Brandonn</i> less of a ‘failure’ and more of an important learning experience for my development life, technical ability and general outlook on other people. 
+                    <br>
+                    <i>Brandonn</i> is no longer online or available to add to servers, but if you’re interested in other things I’ve done with the technology, I’ll be releasing updates regarding Morgann and Rosetta as I work on them.
+                </p>
             </div>
+            
         </main>
         
         <!-- Footer -->
@@ -299,7 +288,7 @@
             </div>
             <div class="footer-text">
                 <a href="legal.html">Privacy & Legal</a>
-                <img class="footer-favicon" src="assets/favicon.png">
+                <img class="footer-favicon" src="../assets/favicon.png">
                 <p>© Isaac Shea, 2020</p>
             </div>
         </footer>

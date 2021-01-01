@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Browser -->
+        <title>Legal | Isaac Shea</title>
+        <link rel="icon" type="image/png" href="./assets/favicon.png">
+        
+        <!-- JS -->
+        <script src="./js/index.js"></script>
+        <script src="./js/header.js"></script>
+        
+        <!-- CSS -->
+        <script src="https://kit.fontawesome.com/3b3b5c1255.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        
+        <link rel="stylesheet" href="./css/global.css">
+    </head>
+    
+    <body>
+        <!-- Nav Bar -->
+        <nav class="nav">
+            <img class="logo-primary" src="./assets/favicon.png">
+            <div class="nav-buttons">
+                <a class="button" href="about.html">About</a>
+                <a class="button dropdown" id="projectsDropdownButton" onclick="projectsDropdown()">
+                    Projects
+                    <span class="material-icons-round">keyboard_arrow_down</span>
+                </a>
+                <a class="button dropdown" id="newsDropdownButton" onclick="newsDropdown()">
+                    News
+                    <span class="material-icons-round">keyboard_arrow_down</span>
+                </a>
+                
+                
+                <a class="button dropdown-mobile" href="projects.html">
+                    Projects
+                </a>
+                <a class="button dropdown-mobile" href="projects.html">
+                    News
+                </a>
+                <a class="button icon">
+                    <span class="material-icons-round" href="javascript:void(0);" onclick="openNav()">drag_handle</span>
+                </a>
+            </div>
+        </nav>
+        
+        <!-- Projects Subnav -->
+        <nav class="subnav" id="projectsSubnav">
+            <a class="button-card" href="projects/gravity.html">
+                <div class="left">
+                    <img src="assets/images/gravity/gravity-thumbnail.png">
+                </div>
+                <div class="right">
+                    <h1>Gravity</h1>
+                    <p>I spent two years working on a mobile game and passion project - here’s how.</p>
+                </div>
+            </a>
+            <a class="button-card" href="projects/morgann.html">
+                <div class="left">
+                    <img src="assets/images/morgann-avatar.png">
+                </div>
+                <div class="right">
+                    <h1>Morgann</h1>
+                    <p>I designed a bot to ruthlessly roast my friends - and so can you.</p>
+                </div>
+            </a>
+            
+            <div class="button-container">
+                <a class="button active" href="projects.html">
+                    See More
+                </a>
+            </div>
+        </nav>
+        
+        <!-- News Subnav -->
+        <nav class="subnav" id="newsSubnav">
+            <a class="button-card" href="news/2021-updates.html">
+                <div class="left">
+                    <img src="assets/images/2021-image.png">
+                </div>
+                <div class="right">
+                    <h1>Moving Into 2021</h1>
+                    <p>Wrapping up this  year and beginning the next with some news about my projects.</p>
+                </div>
+            </a>
+            
+            <div class="button-container">
+                <a class="button active" href="newsroom.html">
+                    See More
+                </a>
+            </div>
+        </nav>
+        
+        <!-- Full-Page Nav -->
+        <div id="fullPageNav" class="full-page-nav">
+            <a class="button icon">
+                    <span class="material-icons-round" href="javascript:void(0);" onclick="closeNav()">close</span>
+                </a>
+            
+            <div id="navContent" class="nav-content">
+                <a class="button" href="about.html">About</a>
+                <a class="button" href="projects.html">Projects</a>
+
+                <div class="social-icons">
+                    <a href="https://github.com/Isaac-Shea" class="button icon" target="_blank"> 
+                        <i class="fab fa-github" style="font-size: 20px"></i></a>
+                    <a href="https://www.youtube.com/channel/UC15Ipgy22HdeOEVs_NRmjig?view_as=subscriber" class="button icon" target="_blank"> 
+                        <i class="fab fa-youtube" style="font-size: 20px"></i></a>
+                    <a href="https://www.instagram.com/theisaacshea/" class="button icon" target="_blank">
+                        <i class="fab fa-instagram" style="font-size: 20px"></i></a>
+                    <a href="https://twitter.com/IsaacShea1" class="button icon" target="_blank">
+                        <i class="fab fa-twitter" style="font-size: 20px"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Anchor Indicator -->
+        <div class="anchor-indicator">
+            <p class="subtitle">Privacy & Legal //</p>
+            <span class="material-icons-round">local_police</span>
+        </div>
+        
+        <!-- Page Header -->
+        <header class="header small">
+            <div class="header-halves">
+                <div class="header-left">
+                    <img class="avatar-primary" src="./assets/images/newsroom-header.png"> 
+                </div>
+
+                <div class="header-right">
+                    <div class="header-text">
+                        <h1 class="title">Privacy & Legal</h1>
+                    </div>
+                    <h1 class="header-background">//</h1>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Page Content -->
+        <main class="page-content">
+            
+            <!-- Intro Content -->
+            <div class="page-section alt">
+                <div class="section-left">
+                    <h2>APP Privacy Policy of Isaac Shea's Products</h2>
+                    <p class="subtitle">Last Updated Jun 20, 2020 //</p>
+                </div>
+                <div class="section-right">
+                    <a class="button alt" href="./assets/legal/APP%20Privacy%20Policy%20of%20Isaac%20Shea.pdf">View the PDF</a>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="page-section content">
+                
+                <h3>Introduction</h3>
+                
+                <ol>
+                    <li>
+                        This APP Privacy Policy of Isaac Shea’s Products (the “Products”) is the official privacy policy, as required by the Privacy Act 1988 (the “Act”) and the Australian Privacy Principles (the “APPs”), and it applies to all the personal information about individuals collected by the Products and other services, including games, websites and Discord bot accounts (“Bots”) created by Isaac Shea.
+                        <br>
+                        <br>
+                        This policy explains how and why personal information is collected, how it is used, and what control individuals have over the use of it.
+                        <br>
+                        <br>
+                        This policy explains details of data collected by the Bot Brandonn, wherein users on Discord servers with Brandonn active may have data collected about them for the purposes of moderation and statistical solutions.
+                    </li>
+                    <li>
+                        Isaac Shea, and by extension the products created, are committed to complying with Commonwealth legislation (the Act and the APPs) that details how businesses may collect, hold, and use personal information about individuals, and to protecting and safeguarding the privacy of individuals when they interact with us.
+                    </li>
+                </ol>
+                
+                <h3>Collection of Information</h3>
+                
+                <ol>
+                    <li>
+                        Some information provided to us by clients, customers and other parties might be considered private or personal. However, without such information we would not be able to carry on our business activities and provide our services. We will only collect such personal information if it is necessary for one of our functions or activities. The kinds of personal information the Products may collect and hold in respect to individuals may include:
+                        <ul>
+                            <li>Names;</li>
+                            <li>Contact details;</li>
+                            <li>Financial information, including information about transactions and trading history with us;</li>
+                            <li>Information about credit history;</li>
+                            <li>Message data, including perceived sentiment and subject information;</li>
+                        </ul>
+                    </li>
+                    <li>
+                        In particular, personal information is collected in the following situations by the Products:
+                        <ul>
+                            <li>If an individual were to contact us, we may keep a record of that communication or correspondence;</li>
+                            <li>When apply for and/or establishing and/or accessing an account with us or ordering products or services from us;</li>
+                            <li>When conducting certain types of transactions, such as cheque or credit card purchases or refunds;</li>
+                            <li>When an individual submits feedback through various avenues about the Products;</li>
+                            <li>When an individual accesses a Discord server with Brandonn actively tracking user data.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        At of before the time of the personal information about an individual is collected by us, we will take reasonable steps to ensure that the individual is made aware of who we are, the fact that the individual is able to gain access to the information held about the individual, the purpose of the collection, the type(s) of organisations to which we may usually disclose the information collected about the individual, any laws requiring the collection of the information and the main consequences if all or part of the information is not collected.
+                    </li>
+                    <li>
+                        We usually collect personal information about individuals directly from the individual. However, sometimes we may need to collect personal information about individuals from third parties for the purposes described below in this policy. The circumstances in which we may need to do this include, for example, where we need information from a third party to assist us to process an application or an order (such as to verify information an individual has provided or to assess the individual’s circumstances), or to assist us locate or communicate with the individual.
+                    </li>
+                </ol>
+                
+                <h3>Use of Information COllected and Disclosure of Personal Information to Others</h3>
+                
+                <ol>
+                    <li>
+                        We may use or disclose personal information to held about an individual as permitted by law and for the business purposes for which it is collected (for example, provision of our services, including administration of our services, notifications about changes to our services, record-keeping following termination of our services and technical maintenance) – that is, to carry on our business activities and provide services to our customers. We may also use such information about individuals for a purpose related to the primary purpose of collection and where the individual would reasonably expect that we would use the information in such a way. This information is only disclosed to persons outside our business in the circumstances set out in this policy or as otherwise notified at the time of collection of the information.
+                    </li>
+                    <li>
+                        Isaac Shea’s business purposes for which personal information is collected, used, and disclosed may include:
+                        <ul>
+                            <li>Processing an application, product order or service request (including verifying an individual’s identity for these purposes);</li>
+                            <li>Managing our products and services, or other relationships and arrangements, including processing receipts, payments, and invoices;</li>
+                            <li>Accessing and monitoring credit worthiness;</li>
+                            <li>Detecting and preventing fraud and other risks to us and our customers;</li>
+                            <li>Responding to inquiries about applications, accounts, or other products, services, or arrangements;</li>
+                            <li>Understanding our customers’ needs and developing and offering products and services to meet those needs;</li>
+                            <li>Researching and developing our products and services, and maintaining and developing our systems and infrastructure;</li>
+                            <li>Addressing complaints;</li>
+                            <li>Meeting legal and regulatory requirements. Various Australian laws may expressly require us to collect and/or disclose personal information about individuals, or we may need to do so in order to be able to comply with other obligations under those laws;</li>
+                            <li>Enforcing our rights, including undertaking debt collection activities and legal proceedings;</li>
+                            <li>To make updates to Products using information provided by various feedback avenues;</li>
+                            <li>Setting up and utilising the user statistics available to Discord server moderators because of Brandonn’s data collection features. </li>
+                        </ul>
+                    </li>
+                    <li>
+                        In addition, we are permitted to use or disclose personal information held about individuals:
+                        <ul>
+                            <li>Where the individual has consented to the use of disclosure;</li>
+                            <li>Where we reasonably believe that the use or disclosure is necessary to lesson or precent a serious, immediate threat to an individual’s health or safety, or the public’s health or safety;</li>
+                            <li>Where re reasonably suspect that unlawful activity has been, is being, or may be engaged in, and the use or disclosure is a necessary part of our investigation, or in reporting the matter to the relevant authorities;</li>
+                            <li>Where use or disclosure is required under, or authorised by, law (for example, to comply with subpoena, a warrant or other order of a court or legal process);</li>
+                            <li>Where we reasonably believe that the use or disclosure is necessary for prevention, investigation, prosecution, and punishment, of crimes or wrongdoings, or the preparation for, and conduct of, proceedings before any court or tribunal, or the implementation of the orders of a court or tribunal by, or on behalf of, an enforcement body;</li>
+                            <li>Where a customer (being the individual or related to the individual) has requested a service to be provided of us, and we are required to disclose the information to a third party in order to facilitate the provision of the service. In most, if not all cases, any such disclosure will be with the consent of the individual.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Third parties to whom we may disclose personal information about individuals in accordance with the business purposes set out above may include:
+                        <ul>
+                            <li>Our legal advisors;</li>
+                            <li>Our IT service providers;</li>
+                            <li>Our financial advisors;</li>
+                            <li>Regulatory bodies in Australia, or any other operating countries;</li>
+                            <li>Participants in financial and payment systems, such as banks, or other credit providers, and credit card associations;</li>
+                            <li>Guarantors and security providers associated with individuals;</li>
+                            <li>Debt collectors;</li>
+                            <li>Cloud information storage providers;</li>
+                            <li>Publishing platform providers (such as Apple, Google and Microsoft);</li>
+                            <li>Other credit providers and trade suppliers.</li>
+                        </ul>
+                    </li>
+                </ol>
+                
+                <h3>Anonymity and pseudonymity</h3>
+                
+                <ol>
+                    <li>
+                        Individuals have the option of dealing with us anonymously. However, this only applies where it is not impractical for us to deal with individuals acting anonymously or under a pseudonym. For example, individuals making general enquiries of us may do so anonymously or under a pseudonym, however, if the dealing with us is to supply good and services and/or to enter into contractual relations, then it is impractical for individuals to deal with us on an anonymous basis or under a pseudonym.
+                    </li>
+                </ol>
+                
+                <h3>Direct Marketing</h3>
+                
+                <ol>
+                    <li>
+                        As part of our functions and business activities, and to promote the services we can provide to our customers, we may use personal information that individuals have provided to us for the purposes of direct marketing. Direct marketing includes, but is not limited to, sending information to our customers and other parties (including individuals) and/or contacting our customers (including individuals) in relation to promotions relating to us. Recipients of direct marketing are always able to opt out of receiving direct marketing communications by sending an email to our Privacy Officer at <a href="mailto:isaac_shea@icloud.com">isaac_shea@icloud.com</a>. In any direct communication, we remind recipients of their right to opt out of receiving direct marketing communications.
+                    </li>
+                </ol>
+                
+                <h3>Links</h3>
+                
+                <ol>
+                    <li>
+                        Our web site(s) may contain links to other web sites, and those third-party web sites may collect personal information about individuals. We are not responsible for the privacy practices of other businesses, or the content of web sites that are linked to our web site(s). We encourage users to be aware when they leave the site, and to read the privacy statements of each and every web site that collects personally identifiable information.
+                    </li>
+                </ol>
+                
+                <h3>Security And Storage</h3>
+                
+                <ol>
+                    <li>
+                        We place a great importance on the security of all information associated with our customers, clients, and others who deal with us. We have security measures in place to protect against the loss, misuse and alteration of personal information under our control. We take all reasonable steps to protect information that is under our control from misuse, interference, loss, and/or unauthorised access, modification, or disclosure. All personal information held is kept securely, and that which is held electronically is held on secure servers in controlled facilities.
+                    </li>
+                    <li>
+                        Personal information is de-identified or destroyed securely when no longer required by us.
+                    </li>
+                    <li>
+                        We retain personal information provided to us, including individuals’ contact, financial, and transactional information to enable us to verify transactions and customer details, and to retain adequate records for legal and accounting purposes. Such information is held securely, including on secure servers in controlled facilities.
+                    </li>
+                    <li>
+                        Information stored within our computer systems, or by our agents who provide electronic storage facilities, can only be accessed by those entrusted with authority and computer network password sanctions.
+                    </li>
+                    <li>
+                        No data transmission over the Internet can be guaranteed to be absolutely secure. As a result, while we strive to protect users’ personal information, we cannot ensure or warrant the security of an information transmitted to it or from its online products or services, and users do so at their own risk. Once we receive a transmission, we make every effort to ensure the security of such transmission on our systems.
+                    </li>
+                </ol>
+                
+                <h3>Access to and Correction of Personal Information</h3>
+                
+                <ol>
+                    <li>
+                        We are committed to, and take all reasonable steps, in respect of maintaining accurate, timely, relevant, complete and appropriate information about our customers and web site users. 
+                    </li>
+                    <li>
+                        Any individual may request access to personal information held about them by us. Such a request Is to be made to our Privacy Officer:
+                    </li>
+                    <div class="central-text">
+                        <p>
+                            <b>Isaac Shea's Privacy Officer</b>
+                            <br>
+                            83 Tansey Drive, Tanah Merah, 4128
+                            <br>
+                            <br>
+                            Telephone: 0490 326 223
+                            <br>
+                            Email: <a href="mailto:isaac_shea@icloud.com">isaac_shea@icloud.com</a>
+                        </p>
+                    </div>
+                    <li>
+                        Please note we require that, as a part of any request by an individual for access to personal information, the individual verifies their identity so that we may be satisfied that the request for access is being made by the individual concerned.
+                    </li>
+                    <li>
+                        Please note that we are not required to give an individual access to personal information in circumstances where:
+                        <ul>
+                            <li>We reasonably believe that giving access would pose a serious threat to the life, health, or safety of any individual, group, or the public; </li>
+                            <li>Giving access would have an unreasonable impact on the privacy of other individuals;</li>
+                            <li>The request for access is frivolous or vexatious;</li>
+                            <li>The information relates to existing or anticipated legal proceedings between us and the individual, and would not be accessible by the process of discovery in those proceedings;</li>
+                            <li>Giving access would reveal us in relation to negotiations with the individual in such a way as to prejudice those negotiations;</li>
+                            <li>Giving access would be unlawful;</li>
+                            <li>Denying access is required or authorised under an Australian law or a court/tribunal order;</li>
+                            <li>
+                                Both of the following apply:
+                                <ul>
+                                    <li>We have reason to suspect that unlawful activity, or misconduct of a serious nature, that relates to our functions or activities has been, is being, or may be engaged in;</li>
+                                    <li>Giving access would be likely to prejudice the taking of appropriate action in relation to the matter;</li>
+                                </ul>
+                            </li>
+                            <li>Giving access would be likely to prejudice one or more enforcement related activities conducted by, or on behalf of, and enforcement body;</li>
+                            <li>Giving access would reveal evaluative information generated within our services in connection with a commercially sensitive decision-making process.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Inaccurate information will be corrected upon receiving advice to this effect. To ensure confidentiality, details of an individual’s personal information will only be passed on the individual if we are satisfied that the information relates to the individual. From time to time, having regard to the purpose of the collection and use of personal information about individuals, we may contact individuals to seek confirmation that the personal information provided to us by the individual is accurate, up-to-date, and complete.
+                    </li>
+                    <li>
+                        If we refuse to provide an individual with access to correct the personal information held by us about the individual, then we will provide reasons for such a refusal. Such reasons will set out the grounds for refusal, the mechanisms available to complain about the refusal and any other matters that are required by the Act.
+                    </li>
+                    <li>
+                        We will respond to any requests for access or correction within a reasonable time of receipt of the request, but by no later than 30 days of the request being received.
+                    </li>
+                </ol>
+                
+                <h3>Complaints</h3>
+                
+                <ol>
+                    <li>
+                        If an individual has a complaint about our APP Privacy Policy, or our collection, use, safe disposal, or destruction of personal information about the individual, any complaint should be directed in the first instance to our Privacy Officer at the contact details set out at clause 20 of this policy.
+                    </li>
+                    <li>
+                        We will investigate any complaint within 30 calendar days and attempt to resolve any breach that might have occurred in relation to the collection, use, or destruction of personal information held by us about the complainant in accordance with the Commonwealth Privacy legislation and the APPs. If a complainant is not satisfied with the outcome of this procedure, then the complainant may contact the Office of the Australian Information Commissioner (“OAIC”) at <a href="https://www.oaic.gov.au" target="_blank">www.oaic.gov.au</a>. 
+                    </li>
+                </ol>
+                
+                <h3>Transfer of Information Overseas</h3>
+                
+                <ol>
+                    <li>
+                        We may utilise local and overseas cloud services for the purpose of storing information. An individual’s personal information may be disclosed to a cloud service provider for that purpose.
+                    </li>
+                    <li>
+                        In all other instances, personal information will only be disclosed by us to overseas recipients in accordance with Australia Privacy Principle 8, such as if the disclosure is required by Australian law.
+                    </li>
+                </ol>
+                
+                <h3>Cookies</h3>
+                
+                <ol>
+                    <li>
+                        We collect information from our site(s) using “IP files”.
+                    </li>
+                    <li>
+                        When a user visits our web site(s) to read, browse or download information, our system will record/log the user’s IP address (the address which identifies the user’s computer on the internet, and which is automatically recognised by our web server), data and time of the visit to our web site(s), the pages viewed, and any information downloaded. This information will only be used for the purpose of site analysis, and to help us offer improved online service(s). We may automatically collect non-personal information about users, such as the type of Internet browsers use, or the site from which the user linked to our web site(s). Individuals cannot be identified from this information, and it is only used to assist us in providing an effective service on our web site(s).
+                    </li>
+                </ol>
+                
+                <h3>Changes to the app privacy policy</h3>
+                
+                <ol>
+                    <li>
+                        If we decide to, or are required to, change our APP Privacy Policy, we will notify of such amendments on our web site(s), and post changes on this APP Privacy Policy page, so that users may always be aware of what information us collected by us, how it is used, and the way in which information may be disclosed. As a result, please refer back to this APP Privacy Policy regularly to review any amendments. 
+                    </li>
+                </ol>
+                
+                <h3>Contacting Us</h3>
+                
+                <ol>
+                    <li>
+                        For further information regarding our APP Privacy Policy, please contact us at the following address:
+                    </li>
+                    <div class="central-text">
+                        <p>Email: <a href="mailto:isaac_shea@icloud.com">isaac_shea@icloud.com</a></p>
+                    </div>
+                    <li>
+                        For more information on privacy legislation, or the APPs, please visit the website of the Office of the Australian Information Commissioner at <a href="https://www.oaic.gov.au" target="_blank">www.oaic.gov.au</a>.
+                    </li>
+                </ol>
+                
+            </div>
+            
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-social-icons">
+                <a href="https://github.com/zaccomode" class="button alt icon" target="_blank"> 
+                    <i class="fab fa-github" style="font-size: 20px"></i></a>
+                <a href="https://www.youtube.com/channel/UC15Ipgy22HdeOEVs_NRmjig?view_as=subscriber" class="button alt icon" target="_blank"> 
+                    <i class="fab fa-youtube" style="font-size: 20px"></i></a>
+                <a href="https://www.instagram.com/zaccomode/" class="button alt icon" target="_blank">
+                    <i class="fab fa-instagram" style="font-size: 20px"></i></a>
+                <a href="https://twitter.com/zaccomode" class="button alt icon" target="_blank">
+                    <i class="fab fa-twitter" style="font-size: 20px"></i></a>
+            </div>
+            <div class="footer-text">
+                <a href="legal.html">Privacy & Legal</a>
+                <img class="footer-favicon" src="assets/favicon.png">
+                <p>© Isaac Shea, 2020</p>
+            </div>
+        </footer>
+    </body>
+</html>
