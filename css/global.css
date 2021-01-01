@@ -908,17 +908,18 @@ body, html {
     
     .header-left, .header-right {
         width: 100%;
+        height: 50%;
         
         justify-content: center;
         margin: 20px;
     }
     
-    .header-left {
+    .header.small > .header-halves > .header-left {
         align-items: flex-end;
         height: 75%;
     }
     
-    .header-right  {
+    .header.small > .header-halves > .header-right  {
         align-items: center;
         height: 25%;
     }
