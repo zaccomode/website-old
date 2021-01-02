@@ -287,9 +287,7 @@ body, html {
 
 /* Full-Page Nav */
 .full-page-nav {
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 1);
     
     position: fixed;
     z-index: 999;
@@ -837,8 +835,12 @@ body, html {
         color: white;
     }
     
-    .nav, .subnav, .full-page-nav {
+    .nav, .subnav {
         background-color: rgba(0, 0, 0, 0.02);
+    }
+    
+    .full-page-nav {
+        background-color: #343434;
     }
     
     .button-card > .right > h1, .button-card > .right > p {
