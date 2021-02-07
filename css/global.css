@@ -470,6 +470,7 @@ body, html {
     
     display: flex;
     flex-direction: column;
+    align-items: center;
     
     background-color: #343434;
 }
@@ -484,6 +485,10 @@ body, html {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+.page-section.project {
+    max-width: 1000px;
 }
 
 .page-section.alt {
@@ -530,6 +535,8 @@ body, html {
     justify-content: center;
     flex-direction: column;
     color: white;
+
+    max-width: 1000px;
 }
 
 .page-section.content > p {
@@ -556,11 +563,14 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    max-width: 100%;
 }
 
 .page-section > .image-container > img {
     border-radius: 5px;
     max-width: 800px;
+    width: 100%;
 }
 
 .page-section > .image-container > p {
@@ -568,18 +578,23 @@ body, html {
     font-weight: bold;
     text-align: center;
     font-size: 13px;
-    width: 800px;
+    max-width: 800px;
 }
 
 .page-section.border {
     margin: 0px;
     padding: 50px 0px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.25); 
+
+    width: 100%;
 }
 
 .section-left {
     width: 50%;
     height: 100%;
+
+    box-sizing: border-box;
+    padding: 20px;
 }
 
 .section-left.alt {
@@ -613,6 +628,9 @@ body, html {
 .section-right {
     width: 50%;
     height: 100%;
+
+    box-sizing: border-box;
+    padding: 20px;
 }
 
 .section-right > p {

@@ -26,8 +26,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Project 3
     var project3 = document.getElementById("project-3");
+    var project3Img = document.getElementById("project-3-img");
+    var project3Title = document.getElementById("project-3-title");
+    var project3Desc = document.getElementById("project-3-desc");
     
-    project3.style.display = "none";
+    project3.href = "../projects/adrodex.html";
+    project3Img.src = "../content/images/adrodex.png";
+    project3Title.innerHTML = "Adrodex";
+    project3Desc.innerHTML = "I dove deep into full stack development to make a site to sell my artwork.";
+
     
     // Project 4
     var project4 = document.getElementById("project-4");
@@ -51,8 +58,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // News 2
     var news2 = document.getElementById("news-2");
+    var news2Img = document.getElementById("news-2-img");
+    var news2Title = document.getElementById("news-2-title");
+    var news2Desc = document.getElementById("news-2-desc");
     
-    news2.style.display = "none";
+    news2.href = "../news/adrodex-release.html";
+    news2Img.src = "../content/images/adrodex.png";
+    news2Title.innerHTML = "Entering E-Commerce";
+    news2Desc.innerHTML = "An online marketplace for high-quality, handmade digital design and artwork.";
     
     // News 3
     var news3 = document.getElementById("news-3");
