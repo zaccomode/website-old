@@ -1,0 +1,223 @@
+/*
+
+    This file handles css elements specific to the APP division of Phosphorus.
+    This must be imported ALONGSIDE framework.css and framework.js to correctly
+    function, and should NOT be imported with web_framework.css.
+
+*/
+
+
+
+/* -- PAGE ELEMENTS -- */
+body, html {
+    min-height: 100%;
+    max-width: 100%;
+    margin: 0px;
+
+    background-color: var(--primary);
+    box-sizing: border-box;
+
+    scroll-behavior: smooth;
+}
+
+
+
+/* -- NAV -- */
+
+/*  NOTE:
+    A 'nav' as considered by the APP division of Ph is entirely different to
+    the WEB division.
+*/
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    box-sizing: border-box;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: var(--primary75);
+    border-radius: var(--cornerRounding);
+    box-shadow: 0px 0px 40px rgba(0,0,0,0.05);
+
+    transition-duration: 0.2s;
+    z-index: 999;
+    padding: 15px;
+}
+.nav .content-horizontal { 
+    width: unset; 
+    height: 100%; 
+    align-items: center;
+}
+.nav .button.icon {
+    padding: 10px;
+}
+.nav .button, .nav .sep.vertical {
+    margin: 0px;
+    margin-left: 5px;
+}
+.nav .sep.vertical {
+    height: 20px;
+}
+.nav > h1 {
+    margin: 0px;
+}
+
+
+
+/* -- NAV RAIL -- */
+.nav-rail {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    box-sizing: border-box;
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10px;
+    height: calc(100vh - 20px);
+}
+.nav-rail > .button {
+    margin: 0px 0px 10px 10px;
+}
+.nav-rail > .sep {
+    margin: 0px 15px 10px 25px;
+}
+
+@media only screen and (max-width: 500px) {
+    .nav-rail {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        background: var(--primary75);
+        box-shadow: 0px 0px 40px rgba(0,0,0,0.05);
+
+        flex-direction: row;
+        justify-content: space-between;
+
+        position: fixed;
+        z-index: 999;
+
+        box-sizing: border-box;
+
+        bottom: 0px;
+        top: unset;
+        height: unset;
+        width: 100vw;
+    }
+    .nav-rail > .button {
+        margin: 20px;
+    }
+    .nav-rail > .sep { display: none; }
+}
+
+
+
+
+/* -- ALERT -- */
+.alert {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    transform: translateX(calc(100% + 10px));
+
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 10px;
+    max-width: 500px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    z-index: 999;
+
+    border-radius: var(--cornerRounding);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: var(--primary75);
+
+    box-shadow: 0px 0px 40px rgba(0,0,0,0);
+}
+
+.alert { animation: slideIn 0.75s ease forwards; }
+.alert.hide { animation: slideOut 0.75s ease forwards; }
+
+.alert h2 {
+    margin: 10px;
+}
+.alert p {
+    margin: 10px;
+    margin-top: 0px;
+}
+
+@media only screen and (max-width: 500px) {
+    .alert {
+        margin-bottom: 110px;
+    }
+}
+
+
+
+/* -- MAIN -- */
+.main {
+    display: flex;
+    max-width: 100%;
+}
+
+
+
+/* SIDEBAR */
+.sidebar {
+    flex: 0 2 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10px;
+    height: calc(100vh - 20px);
+    max-width: 400px;
+    
+    margin: 10px;
+    padding: 5px;
+
+    border-radius: var(--cornerRounding);
+    background-color: var(--tertiary25);
+}
+@media only screen and (max-width: 1000px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+/* MAIN CONTENT */
+.content {
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 500px);
+    margin: 10px;
+}
+@media only screen and (max-width: 500px) {
+    .content {
+        margin-bottom: 100px;
+    }
+}
+
+
+/* EMPTY STATE */
+.empty-state {
+    align-items: center;
+}

@@ -1,0 +1,41 @@
+/* -- HEADER --  */
+.header > img, .header .image-container {
+    margin-bottom: 20px;
+    height: auto;
+    width: 100%;
+}
+.header .button-container { 
+    justify-content: flex-end;
+    margin: 10px 0px;
+}
+.header .button-container .button {
+    margin-right: 0px;
+}    
+.header h4 {
+    margin: 0px;
+}
+.header h1 {
+    margin: 20px 0px 10px 0px;
+}
+
+
+
+/* -- CONTACT ROW -- */
+.contact-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: stretch;
+}
+.contact-row * {
+    margin: 2px 0px;
+}
+.contact-row span {
+    color: var(--tertiary);
+    margin: 10px 30px 10px 10px;
+    font-size: 30px;
+}
+
+.contact-sep {
+    margin: 15px 0px !important;
+}

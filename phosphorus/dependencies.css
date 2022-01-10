@@ -1,0 +1,69 @@
+/* -- VARIABLES -- */
+:root {
+    /* Colours */
+    --primary: #F2F2F2;
+    --primary25: #f2f2f21c;
+    --primary50: #F2F2F221;
+    --primary75: #F2F2F2be;
+    --primaryLight: hsl(0, 0%, 79%);
+
+    --secondary: #9652FF;
+    --secondary25: #9652FF18;
+    --secondary50: #9652FF33;
+    --secondary75: #9652FFbe;
+    --secondaryLight: #ad7bf7;
+
+    --tertiary: #1a1a25;
+    --tertiary25: #1a1a250e;
+    --tertiary50: #1a1a2521;
+    --tertiary75: #1a1a25be;
+    --tertiaryLight: #202020;
+
+    /* Misc */
+    --cornerRounding: 5px;
+    --transitionDuration: 0.2s;
+}
+@media (prefers-color-scheme: dark) {
+    :root {        
+        --primary: #1a1a25;
+        --primary25: #1a1a250e;
+        --primary50: #1a1a2521;
+        --primary75: #1a1a25be;
+        --primaryLight: #303030;
+    
+        --tertiary: #F2F2F2;
+        --tertiary25: #f2f2f21c;
+        --tertiary50: #f2f2f236;
+        --tertiary75: #f2f2f2be; 
+        --tertiaryLight: #cacaca;
+    }
+}
+@media screen and (max-width: 1000px) {
+    :root {
+        --cornerRounding: 10px;
+    }
+}
+
+
+/* -- OTHER VARIABLES -- */
+/* Paste any other useful variables here (specific colors, etc.) */
+
+
+
+/* -- FONTS -- */
+
+/* Header */
+@font-face {
+    font-family: "Header";
+    src: url("../content/fonts/Inter-VariableFont_slnt\,wght.ttf");
+    font-weight: 400 900;
+    font-style: oblique 0deg 10deg;
+}
+
+/* Paragraph */
+@font-face {
+    font-family: "Paragraph";
+    src: url("../content/fonts/SpaceGrotesk-VariableFont_wght.ttf");
+    font-weight: 400 900;
+    font-style: oblique 0deg 10deg;
+}
