@@ -1,324 +1,268 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- META -->
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <!-- Browser -->
-        <title>Home | Isaac Shea</title>
-        <link rel="icon" type="image/png" href="./content/favicon.png">
+        <!-- BROWSER -->
+        <title>Isaac Shea • Overcomplicating Simple Things</title>
+        <link rel="icon" href="./content/media/favicon.png">
 
-        <!-- Meta -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-
-        <meta name="description" content="I've been making content on the internet for half a decade, and have no intention of stopping anytime soon.">
-        <meta name="keywords" content="Developer, Web Developer, Game Developer, Morgann, Gravity">
-
-        <!-- Social Media -->
-        <meta property="og:title" content="Isaac Shea">
-        <meta property="og:description" content="I've been making content on the internet for half a decade, and have no intention of stopping anytime soon.">
-        <meta property="og:image" content="https://isaacshea.com/content/avatar.png">
+        <!-- SOCIAL MEDIA -->
+        <meta property="og:title" content="Isaac Shea • Overcomplicating Simple Things">
+        <meta property="og:description" content="I'm Isaac Shea, a Brisbane-based IT & IxD student at QUT. I've been making content on the internet since 2015, experimenting with game development, brand design and full-stack development.">
+        <meta property="og:image" content="https://isaacshea.com/content/media/social_banner.png">
         <meta property="og:url" content="https://isaacshea.com/">
-        <meta property="og:locale" content="en_AU">
+        <meta property="og:type" content="website">
         <meta property="og:site_name" content="Isaac Shea">
+        <meta property="og:locale" content="en_AU">
 
         <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@zaccomode">
+        <meta name="twitter:creator" content="@zaccomode">
+        <meta name="twitter:title" content="Isaac Shea • Overcomplicating Simple Things">
+        <meta name="twitter:description" content="I'm Isaac Shea, a Brisbane-based IT & IxD student at QUT. I've been making content on the internet since 2015, experimenting with game development, brand design and full-stack development.">
+        <meta name="twitter:image" content="https://isaacshea.com/content/media/social_banner.png">
         
-        <!-- JS -->
-        <script src="js/index.js"></script>
-        <script src="js/header.js"></script>
-        
-        <!-- CSS -->
-        <script src="https://kit.fontawesome.com/3b3b5c1255.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
+        <!-- PHOSPHORUS -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-        
+        <link rel="stylesheet" href="./phosphorus/framework.css">
+        <link rel="stylesheet" href="./phosphorus/web_framework.css">
+        <link rel="stylesheet" href="./phosphorus/dependencies.css">
+        <script src="./phosphorus/framework.js"></script>
+        <script src="./phosphorus/web_framework.js"></script>
+
+        <!-- CSS -->
         <link rel="stylesheet" href="./css/global.css">
-    </head>
+        <link rel="stylesheet" href="./css/index.css">
+
+        <!-- JS -->
+        <script src="./js/global.js"></script>
+        <script src="./js/instagram.js"></script>
+
+        <!-- OTHER -->
+        <script src="https://kit.fontawesome.com/3b3b5c1255.js" crossorigin="anonymous"></script>
+    </head> 
+
+    <body onload="loadFramework(); loadCarousels(); loadInstagram();">
     
-    <body>
-        <!-- Nav Bar -->
-        <nav class="nav">
-            <span class="material-icons-round" id="arrowDown" style="display: none">keyboard_arrow_down</span>
-            <img class="logo-primary" src="../content/favicon.png">
-            <div class="nav-buttons" id="nav-buttons">
-                <a class="button" href="about.html">About</a>
-                <a class="button dropdown" id="projectsDropdownButton" onclick="projectsDropdown()">
-                    Projects
-                    <span class="material-icons-round">keyboard_arrow_down</span>
-                </a>
-                <a class="button dropdown" id="newsDropdownButton" onclick="newsDropdown()">
-                    News
-                    <span class="material-icons-round">keyboard_arrow_down</span>
-                </a>
-                
-                
-                <a class="button dropdown-mobile" href="projects.html">
-                    Projects
-                </a>
-                <a class="button dropdown-mobile" href="newsroom.html">
-                    News
-                </a>
-                
-                <a class="button icon">
-                    <span class="material-icons-round" href="javascript:void(0);" onclick="openNav()">drag_handle</span>
-                </a>
+        <!-- NAV -->
+        <nav class="nav responsive" id="nav">
+            <img src="./content/media/favicon.png">
+                                 
+            <div class="content-horizontal except become-mobile-sheet">
+                <a data-icon='home' class="button secondary outlined" href="..">Home</a>
+                <a data-icon='account_circle' class="button" href="./about.html">About</a>
+                <a data-icon='book' class="button" href="./blog.html">Blog</a>
             </div>
         </nav>
-        
-        <!-- Projects Subnav -->
-        <nav class="subnav" id="projectsSubnav">
-            <a class="button-card" id="project-1">
-                <div class="left">
-                    <img id="project-1-img" src="content/images/placeholder-imagelarge.png">
-                </div>
-                <div class="right">
-                    <h1 id="project-1-title">Project</h1>
-                    <p id="project-1-desc">Description</p>
-                </div>
-            </a>
-            <a class="button-card" id="project-2">
-                <div class="left">
-                    <img id="project-2-img" src="content/images/placeholder-imagelarge.png">
-                </div>
-                <div class="right">
-                    <h1 id="project-2-title">Project</h1>
-                    <p id="project-2-desc">Description</p>
-                </div>
-            </a>
-            <a class="button-card" id="project-3">
-                <div class="left">
-                    <img id="project-3-img" src="content/images/placeholder-imagelarge.png">
-                </div>
-                <div class="right">
-                    <h1 id="project-3-title">Project</h1>
-                    <p id="project-3-desc">Description</p>
-                </div>
-            </a>
-            <a class="button-card" id="project-4">
-                <div class="left">
-                    <img id="project-4-img" src="content/images/placeholder-imagelarge.png">
-                </div>
-                <div class="right">
-                    <h1 id="project-4-title">Project</h1>
-                    <p id="project-4-desc">Description</p>
-                </div>
-            </a>
-            
-            <div class="button-container">
-                <a class="button active" href="projects.html">
-                    See More
-                </a>
-            </div>
-        </nav>
-        
-        <!-- News Subnav -->
-        <nav class="subnav" id="newsSubnav">
-            <a class="button-card" id="news-1">
-                <div class="left">
-                    <img id="news-1-img" src="content/images/placeholder-imagelarge.png">
-                </div>
-                <div class="right">
-                    <h1 id="news-1-title">Project</h1>
-                    <p id="news-1-desc">Description</p>
-                </div>
-            </a>
-            
-            <a class="button-card" id="news-2">
-                <div class="left">
-                    <img id="news-2-img" src="content/images/placeholder-imagelarge.png">
-                </div>
-                <div class="right">
-                    <h1 id="news-2-title">Project</h1>
-                    <p id="news-2-desc">Description</p>
-                </div>
-            </a>
-            
-            <a class="button-card" id="news-3">
-                <div class="left">
-                    <img id="news-3-img" src="content/images/placeholder-imagelarge.png">
-                </div>
-                <div class="right">
-                    <h1 id="news-3-title">Project</h1>
-                    <p id="news-3-desc">Description</p>
-                </div>
-            </a>
-            
-            <a class="button-card" id="news-4">
-                <div class="left">
-                    <img id="news-4-img" src="content/images/placeholder-imagelarge.png">
-                </div>
-                <div class="right">
-                    <h1 id="news-4-title">Project</h1>
-                    <p id="news-4-desc">Description</p>
-                </div>
-            </a>
-            
-            <div class="button-container">
-                <a class="button active" href="newsroom.html">
-                    See More
-                </a>
-            </div>
-        </nav>
-        
-        <!-- Full-Page Nav -->
-        <div id="fullPageNav" class="full-page-nav">
-            <a class="button icon">
-                    <span class="material-icons-round" href="javascript:void(0);" onclick="closeNav()">close</span>
-                </a>
-            
-            <div id="navContent" class="nav-content">
-                <a class="button" href="about.html">About</a>
-                <a class="button" href="projects.html">Projects</a>
-                <a class="button" href="newsroom.html">News</a>
 
-                <div class="social-icons">
-                    <a href="https://github.com/Isaac-Shea" class="button icon" target="_blank"> 
-                        <i class="fab fa-github" style="font-size: 20px"></i></a>
-                    <a href="https://www.youtube.com/channel/UC15Ipgy22HdeOEVs_NRmjig?view_as=subscriber" class="button icon" target="_blank"> 
-                        <i class="fab fa-youtube" style="font-size: 20px"></i></a>
-                    <a href="https://www.instagram.com/theisaacshea/" class="button icon" target="_blank">
-                        <i class="fab fa-instagram" style="font-size: 20px"></i></a>
-                    <a href="https://twitter.com/IsaacShea1" class="button icon" target="_blank">
-                        <i class="fab fa-twitter" style="font-size: 20px"></i></a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Anchor Indicator -->
-        <div class="anchor-indicator">
-            <p class="subtitle">Home //</p>
-            <span class="material-icons-round">home</span>
-        </div>
-        
-        <!-- Page Header -->
-        <header class="header">
-            <div class="header-halves">
-                <div class="header-left">
-                    <img class="avatar-primary" src="../content/avatar.png"> 
-                </div>
+        <!-- HEADER -->
+        <header class="header responsive">
+            <img src="./content/media/header_image.png">
 
-                <div class="header-right">
-                    <div class="header-text">
-                        <h1 class="title">Isaac Shea</h1>
-                        <p class="subtitle">Overcomplicating Simple Things //</p>
-                    </div>
-                    <h1 class="header-background">//</h1>
-                </div>
-            </div>
-            <div class="header-prompt">
-                <span class="material-icons-round">keyboard_arrow_down</span>
-            </div>
-        </header>
-        
-        <!-- Page Content -->
-        <main class="page-content">
-            
-            <!-- Intro Content -->
-            <div class="page-section">
-                <div class="section-left">
-                    <h2>Some Nerd from Brisbane</h2>
-                    <p class="subtitle">Making Stuff for the Internet //</p>
-                </div>
-                <div class="section-right">
+            <div class="content-horizontal">
+                <div class="content-vertical" style="flex-basis: 60%; margin-right: 20px;">
+                    <h1>Fancy seeing you around</h1>
+                    <h4>Nerd • developer • overthinker</h4>
                     <p>
-                        I've been making content on the internet for half a decade, and have no intention of stopping anytime soon.
-                        <br>
-                        <br>
-                        I've developed bots, interfaces, a game, and now websites. My core philosophy has always been to develop a beautiful and complete experience for every user.
+                        I'm a Brisbane-based IT & IxD student at QUT. I've been making content on the internet since 2015, experimenting with game development, brand design and full-stack development.
+                        <br> <br>
+                        I've become proficient in Python, SQL, HTML, CSS, JavaScript and Node.JS, specializing in user interaction and experience. I also have experience in brand design, with some of my work being used by car restorers and ending up on the side of mining equipment!
                     </p>
                 </div>
-            </div>
-            
-            <!-- Intro Projects -->
-            <div class="page-section border">
-                <div class="section-horizontalview">
-                    <div class="card-container">
 
-                        <!-- Adrodex Card -->
-                        <div class="card focus">
-                            <div class="card-header">
-                                <img class="card-image" src="content/images/adrodex.png">
-                                <div class="vertical-text">
-                                    <h4>Adrodex</h4>
-                                    <p class="subtitle-small">001 //</p>
-                                </div>
+                <div class="content-vertical" style="flex-basis: 40%;">
+
+                    <div class="content-horizontal except button-container">
+                        <a class="button icon" href="https://www.instagram.com/zaccomode/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="button icon" href="https://www.behance.net/zaccomode" target="_blank"><i class="fab fa-behance"></i></a>
+                        <a class="button icon" href="https://dribbble.com/zaccomode" target="_blank"><i class="fab fa-dribbble"></i></a>
+                    </div>
+
+                    <div class="content-vertical background">
+                        <div class="contact-row">
+                            <span class="material-icons-round">mail</span>
+                            <div class="content-vertical">
+                                <h3>isaac@sheamgt.com</h3>
                             </div>
-                            <p>
-                                Last year, I redesigned my girlfriend’s iPhone icons. This year, I realised I could do something with them.
-                            </p>
-                            <a class="button active" href="projects/adrodex.html">Let's See</a>
-                        </div>  
-                        
-                        <!-- Morgann Card -->
-                        <div class="card">
-                            <div class="card-header">
-                                <img class="card-image" src="content/images/morgann-avatar.png">
-                                <div class="vertical-text">
-                                    <h4>Morgann</h4>
-                                    <p class="subtitle-small">002 //</p>
-                                </div>
-                            </div>
-                            <p>
-                                Do you ever get tired of heartlessly insulting your friends? I did too, so I designed a bot to do it on my behalf.
-                            </p>
-                            <a class="button alt" href="projects/morgann.html">I'm Listening</a>
                         </div>
                         
-                        <!-- Gravity Card -->
-                        <div class="card">
-                            <div class="card-header">
-                                <img class="card-image" src="content/images/gravity.png">
-                                <div class="vertical-text">
-                                    <h4>Gravity</h4>
-                                    <p class="subtitle-small">003 //</p>
-                                </div>
-                            </div>
-                            <p>
-                                You pilot a hot air balloon through a desolate, floating city, desperately avoiding obstacles - here’s how I made <i>Gravity</i>.
+                        <div class="sep horizontal contact-sep"></div>
 
-                            </p>
-                            <a class="button alt" href="projects/gravity.html">Learn more</a>
+                        <div class="contact-row">
+                            <span class="material-icons-round">place</span>
+                            <div class="content-vertical">
+                                <h3>Brisbane, Australia</h3>
+                            </div>
                         </div>
-                        
-                        <!-- Brandonn Card -->
-                        <div class="card">
-                            <div class="card-header">
-                                <img class="card-image" src="content/images/brandonn-avatar.png">
-                                <div class="vertical-text">
-                                    <h4>Brandonn</h4>
-                                    <p class="subtitle-small">004 //</p>
-                                </div>
-                            </div>
-                            <p>
-                                I tried to revolutionise Discord’s moderation using the power of Machine Learning - here’s where I failed, and what I learned.
 
-                            </p>
-                            <a class="button alt" href="projects/brandonn.html">See How</a>
+                        <div class="sep horizontal contact-sep"></div>
+
+                        <div class="contact-row">
+                            <span class="material-icons-round">school</span>
+                            <div class="content-vertical">
+                                <p class="subtitle">Bachelor of IT & Bachelor of Design (Interaction) & QUT</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </header>
+
+        <main class="main responsive">
+            <div class="sep horizontal"></div>
+
+            <!-- WHAT I'VE MADE CAROUSEL -->
+            <h1>What I've made</h1>
+            <div class="content-vertical">
+                <div class="content-carousel">
+                    <button class="button outlined button-left"><span class="material-icons-round">keyboard_arrow_left</span></button>
+    
+                    <!-- CAROUSEL ITEMS -->
+                    <div class="carousel-items">
+    
+                        <!-- TASKMASTER -->
+                        <div class="carousel-item active">
+                            <div class="carousel-image" style="background-image: url(./content/media/projects/taskmaster_1.png);"></div>
+                            <div class="content-vertical">
+                                <div class="content-vertical">
+                                    <h3>A suite of free lifestyle applications.</h3>
+                                    <p>
+                                        Built on the belief that the knowledge to live a fulfilling life should not be gatekept by a paywall, Taskmaster applications are a free and open suite of life-serving applications.
+                                    </p>
+                                </div>
+
+                                <div class="content-horizontal except">
+                                    <a class="button tertiary" href="./blog/taskmaster.html">See more</a>
+                                    <div class="sep vertical not-mobile"></div>
+                                    <a class="button tertiary icon not-mobile" href="https://taskmaster.cc/" target="_blank"><span class="material-icons-round">open_in_new</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PHOSPHORUS -->
+                        <div class="carousel-item">
+                            <div class="carousel-image" style="background-image: url(./content/media/projects/phosphorus_1.png);"></div>
+                            <div class="content-vertical">
+                                <div class="content-vertical">
+                                    <h3>My custom, in-house web design engine.</h3>
+                                    <p>
+                                        Constructed to assist in the creation of the Taskmaster suite, Phosphorus is now used across every website and webapp I develop.
+                                    </p>
+                                </div>
+
+                                <div class="content-horizontal except">
+                                    <a class="button tertiary" href="./blog/phosphorus.html">Read on</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MORGANN -->
+                        <div class="carousel-item">
+                            <div class="carousel-image" style="background-image: url(./content/media/projects/morgann_1.png);"></div>
+                            <div class="content-vertical">
+                                <div class="content-vertical">
+                                    <h3>The insult extraordinaire</h3>
+                                    <h4>Legacy project</h4>
+                                    <p>
+                                        Do you ever get tired of heartlessly insulting your friends? I did, so I designed a bot to do it on my behalf.
+                                    </p>
+                                </div>
+
+                                <div class="content-horizontal except">
+                                    <a class="button tertiary" href="./blog/morgann.html">I'm listening</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- GRAVITY -->
+                        <div class="carousel-item">
+                            <div class="carousel-image" style="background-image: url(./content/media/projects/gravity_1.png);"></div>
+                            <div class="content-vertical">
+                                <div class="content-vertical">
+                                    <h3>Rise up.</h3>
+                                    <h4>Legacy project</h4>
+                                    <p>
+                                        You pilot a hot air balloon through an infinite, floating city, avoiding obstacles - this is Gravity, my first (and only) video game.
+                                    </p>
+                                </div>
+
+                                <div class="content-horizontal except">
+                                    <a class="button tertiary" href="./blog/gravity.html">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <button class="button outlined button-right"><span class="material-icons-round">keyboard_arrow_right</span></button>
+                </div>
+
+                <div class="carousel-tickers">
+                    <div class="ticker active"></div>
+                    <div class="ticker"></div>
+                </div>
+            </div>
+
+            <div class="sep horizontal"></div>
+
+            <!-- WHAT I'VE WRITTEN -->
+            <h1>What I've written</h1>
+            <div class="content-grid">
+                <a class="grid-item" href="./blog/design-for-stupid-people.html" target="_blank">
+                    <img src="./content/media/blog/design_for_stupid_people_1.png">
+                    <div class="grid-content">
+                        <h3>Why we should design for stupid people</h3>
+                        <h4>08.01.2022</h4>
+                        <p>
+                            Designing for 'stupid people' isn't about designing for literally stupid people: it's about designing something so that regular people can still use what we design if they aren't on the ball that day.
+                        </p>
+                    </div>
+                </a>
+
+                <a class="grid-item" href="./blog/taskmaster.html" target="_blank">
+                    <img src="./content/media/projects/taskmaster_2.png">
+                    <div class="grid-content">
+                        <h3>Taskmaster • Making for myself</h3>
+                        <h4>07.01.2022</h4>
+                        <p>
+                            For as long as I've been developing software, I've been looking for a project that is both engaging to build and has a definite target market. The former criteria was easy; the challenge and reward of building something new had always been what drew me to software development, but the latter criteria was always difficult.
+                        </p>
+                    </div>
+                </a>
+
+                <a class="grid-item" href="./blog/phosphorus.html" target="_blank">
+                    <img src="./content/media/projects/phosphorus_2.png">
+                    <div class="grid-content">
+                        <h3>Phosphorus • Building my own design system</h3>
+                        <h4>29.12.2021</h4>
+                        <p>
+                            Phosphorus is the culmination of everything I've learned about UI & UX since I started designing for computers half a decade ago. Here's how and why I built it.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <a href="./blog.html" class="button secondary outlined" style="margin: 10px;">Read more</a>
+
+
+            <div class="sep horizontal"></div>
+            
+
+            <!-- MY INSTAGRAM -->
+            <h1>What's on my Instagram</h1>
+            <div class="content-instagram" id="instagram-content">
+            </div>
+            <a href="https://www.instagram.com/zaccomode/" target="_blank" class="button secondary outlined" style="margin: 10px;">You should follow me</a>
         </main>
-        
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-social-icons">
-                <a href="https://github.com/zaccomode" class="button alt icon" target="_blank"> 
-                    <i class="fab fa-github" style="font-size: 20px"></i></a>
-                <a href="https://www.youtube.com/channel/UC15Ipgy22HdeOEVs_NRmjig?view_as=subscriber" class="button alt icon" target="_blank"> 
-                    <i class="fab fa-youtube" style="font-size: 20px"></i></a>
-                <a href="https://www.instagram.com/zaccomode/" class="button alt icon" target="_blank">
-                    <i class="fab fa-instagram" style="font-size: 20px"></i></a>
-                <a href="https://twitter.com/zaccomode" class="button alt icon" target="_blank">
-                    <i class="fab fa-twitter" style="font-size: 20px"></i></a>
-            </div>
-            <div class="footer-text">
-                <a href="legal.html">Privacy & Legal</a>
-                <img class="footer-favicon" src="../content/favicon.png">
-                <p>© Isaac Shea, 2021</p>
-            </div>
+
+        <!-- FOOTER -->
+        <footer class="footer responsive">
+            <p>
+                This website was created using Phosphorus, my in-house web design engine. If you want a website just like this, I offer it as a service!
+            </p>
+            <a href="https://isaacshea.com/" target="_blank"><img src="./content/media/footer_image.png"></a>
         </footer>
     </body>
 </html>

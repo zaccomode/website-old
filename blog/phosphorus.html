@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- META -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- BROWSER -->
+        <title>Phosphorus • Building my own design system • Isaac Shea</title>
+        <link rel="icon" href="../content/media/favicon.png">
+
+        <!-- SOCIAL MEDIA -->
+        <meta property="og:title" content="Phosphorus • Building my own design system • Isaac Shea">
+        <meta property="og:description" content="Phosphorus is the culmination of everything I've learned about UI & UX since I started designing for computers half a decade ago. Here's how and why I built it.">
+        <meta property="og:image" content="https://isaacshea.com/content/media/projects/phosphorus_2.png">
+        <meta property="og:url" content="https://isaacshea.com/blog/phosphorus.html">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Isaac Shea">
+        <meta property="og:locale" content="en_AU">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@zaccomode">
+        <meta name="twitter:creator" content="@zaccomode">
+        <meta name="twitter:title" content="Phosphorus is the culmination of everything I've learned about UI & UX since I started designing for computers half a decade ago. Here's how and why I built it.">
+        <meta name="twitter:image" content="https://isaacshea.com/content/media/projects/phosphorus_2.png">
+        
+        <!-- PHOSPHORUS -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <link rel="stylesheet" href="../phosphorus/framework.css">
+        <link rel="stylesheet" href="../phosphorus/web_framework.css">
+        <link rel="stylesheet" href="../phosphorus/dependencies.css">
+        <script src="../phosphorus/framework.js"></script>
+        <script src="../phosphorus/web_framework.js"></script>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="../css/blog.css">
+
+        <!-- JS -->
+        <script src="../js/global.js"></script>
+
+        <!-- OTHER -->
+        <script src="https://kit.fontawesome.com/3b3b5c1255.js" crossorigin="anonymous"></script>
+    </head> 
+
+    <body onload="loadFramework();">
+    
+        <!-- NAV -->
+        <nav class="nav responsive" id="nav">
+            <img src="../content/media/favicon.png">
+                                 
+            <div class="content-horizontal except become-mobile-sheet">
+                <a data-icon='home' class="button" href="..">Home</a>
+                <a data-icon='account_circle' class="button" href="../about.html">About</a>
+                <a data-icon='book' class="button secondary outlined" href="../blog.html">Blog</a>
+            </div>
+        </nav>
+
+        <!-- HEADER -->
+        <header class="header responsive">
+            <img src="../content/media/projects/phosphorus_2.png">
+        
+            <h1>Phosphorus • Building my own design system</h1>
+            <h4>29.12.2021</h4>
+
+            <div class="chip-content">
+                <div class="chip highlight">Ongoing project</div>
+                <div class="chip">Design System</div>
+                <div class="chip">UI/UX</div>
+                <div class="chip">Web Development</div>
+            </div>
+
+            <p>
+                Since I started building websites back in 2020, I'd always been interested in modularising as much CSS as I could - although my first websites were not an indication of this with their mountains of reused code. Over time, though, I began to develop an ad-hoc design system that I'd move between projects and would evolve with each one: when I needed a new input element or layout option I would add it to the existing codebase, quickly piling up lines upon lines of re-used code.
+            </p>
+        </header>
+
+        <!-- CONTENT -->
+        <main class="main responsive">
+            <p>
+                When I began developing Wolfram in June 2021, I was presented with a new issue: webapps. I'd never developed a full-page webapp before, so I had no idea how to optimise it for mobile and was basically back to square one in terms of code modularisation. I picked a great deal up when developing Wolfram I, so when I redesigned the interface for Wolfram III it was a great deal better, although it didn't at all work on mobile devices, and the codebase was messy. <br> <br>
+
+                So, when I was staring down the barrel of redesigning Wolfram's UI yet again to make it compatible with mobile devices, I decided to sit down and develop a proper, fully-fledged design engine that was built from the get-go to do everything I needed it to. This was Phosphorus.
+            </p>
+
+            <h2>Design</h2>
+            <p>
+                Any sane person in web development would understand just how painful writing accessible webpages truly is - devices come in so many different shapes and sizes that it's nearly impossible to develop a perfect website for all of them. As a result, many developers choose to use a third-party system like Bootstrap or a React library to do the heavy lifting work when designing a page. <br>
+                I didn't want to use an existing library, however - and there were a few reasons for it:
+            </p>
+
+            <ul>
+                <li>
+                    <b>Originality:</b> It's very easy to build a generic-looking website with an existing design system, and I wanted the freedom to make something original.
+                </li>
+                <li>
+                    <b>Workflow:</b> I design almost every page down to the pixel in a vector program, before I even open a code editor. It allows me to absolutely nail the look of every page, and removes the guesswork from writing HTML and CSS at the same time. Using another design system would mean I couldn't do this as accurately.
+                </li>
+                <li>
+                    <b>Familiarity:</b> The ad-hoc design system that I wrote allowed me to go from a completely designed site schematic to functional and published site in under 3 hours in some cases, with individual page development times being minutes, not hours. Imagine what I could do with a purpose-built system!
+                </li>
+            </ul>
+
+            <p>
+                I started designing Phosphorus in September by designing what I wanted Wolfram V (the latest redesign of Wolfram) to look like. To describe the exact design process to build for both desktop and mobile-class devices is difficult because it required a lot of back-and-forth between what can be done from a design standpoint, and what should be done from a usability and practicality point of view.
+            </p>
+
+            <div class="image-container">
+                <img src="../content/media/projects/phosphorus_3.png">
+                <p>
+                    Wolfram III (left) was designed on my ad-hoc system and worked great on desktop, but was unusable on mobile. I intended to fix that with Wolfram V (right).
+                </p>
+            </div>
+
+            <p>
+                This comparison should explain a lot of the changes that I made while still in the design process, many iteratively. <br>
+                I dropped the monospace font because, while it had a "techno" personality that I liked, it wasn't practical to read: monospace is naturally wider than regular fonts so it just took up more room and wasted space. A lot of decisisions were made to move from "riskier" input methods and layout systems back to tried and true systems throughout the process, not only to make development easier but to give a user what they would expect to see from an input. <br> <br>
+
+                I did make some bolder choices when redesigning Wolfram, though: the horizontal menu buttons ("set", "routine", "view", etc.) were removed and replaced with a vertical, icon-only navigation rail. This decision was made for the primary reason of maximising the vertical space that the primary page content has access to, which I found reduced the difference in both design and usability between a mobile and desktop device (the nav rail would move to the bottom and the sidebar would move to a popover on mobile devices). This change did of course come at the expense of quick usability - writing out the words for the page is more immediately understandable as to their function, but given Wolfram (and most webapps I'll be designing with Phosphorus) have only 4-6 pages, I figured a user would quickly learn to associate the pages with the icons instead of the words. <br> <br>
+
+                There were also a few changes that didn't make it to the final version, notably outlines. Originally, I designed it so that any element with an outline would indicate that it was interactible; buttons, sliders and cards would have them, but not containers and layout elements. I removed it, however, because I found it made a negligible difference to usability, but added a "corporate" look that dated the whole design a fair bit.
+            </p>
+
+            <h2>Code</h2>
+            <p>
+                With most of Wolfram V designed by mid-September, I started actually creating the substance of Phosphorus in a dedicated project that contained only the design elements. It's worth noting that the next segment gets fairly code nerd heavy, but I'll try to explain everything as best I can. <br> <br>
+
+                Phosphorus is written in the native web trio of languages (HTML, CSS and JavaScript, each controlling page structure, style and function respectively). The biggest bulk, at least from a user's perspective, is the CSS, so that's where I started.
+                Every project using Phosphorus has at least four CSS files that make up the framework:
+            </p>
+            <ul>
+                <li>
+                    <code>dependencies.css</code> - This contains all the underlying CSS variables for the project, including colours, corner rounding and animation speed. Colours are tied to the user's preferred colour scheme so that darker colours can easily be displayed for devices with a dark mode enabled.
+                </li>
+                <li>
+                    <code>framework.css</code> - This file contains the core elements of Phosphorus, such as input elements and basic layout systems. It's universal across both disciplines of Phosphorus (I'll get to this shortly).
+                </li>
+                <li>
+                    <code>web_framework.css</code> OR <code>app_framework.css</code> - These files contain the overrides and layout elements required for the individual disciplines of Phosphorus. You may remember that I mentioned two very distinct use cases for my ad-hoc design systems up top, and this was how I could create a single system that could function across both.
+                </li>
+                <li>
+                    <code>global.css</code> - This file held all the project-specific elements and overrides required.
+                </li>
+            </ul>
+
+            <p>
+                Oftentimes, individual pages would contain another CSS file stored elsewhere that contained unique elements and overrides for that page (like a local <code>global.css</code>). <br> <br>
+
+                Up until this point, I've only talked about designing Phosphorus for Wolfram and other webapps, however I regularly develop "traditional" websites (such as this isaacshea.com!), and wanted a unified system that I could use across both. Originally I was going to use only one discipline to do both, but as I continued designing Wolfram I realised that the differences between a website and webapp run too deep to do that.
+            </p>
+
+            <div class="image-container">
+                <img src="../content/media/projects/phosphorus_4.png">
+                <p>
+                    The web framework handles the <code>nav</code> element as a nav bar, whereas the app framework handles it as a vertical rail.
+                </p>
+            </div>
+
+            <p>
+                I think the most notable example of this is the <code>nav</code> element, as it's called in CSS code. In the web discipline, a <code>nav</code> is a horizontal series of text buttons across the top of the screen that allow a user to navigate between pages. While the functionality remains the same in the app discipline, the implementation is different; an app <code>nav</code> is a vertical rail that houses icon buttons across the left of the screen on desktop devices, and across the bottom on mobile devices. <br> <br>
+
+                The JavaScript content of Phosphorus was a completely new system that I had high hopes for that were ultimately never delivered upon.
+                When I started writing the code for the project, I wanted to use JavaScript objects to assist with the quick creation of common but complex elements. For example, a simple Phosphorus text input is actually comprised of up to 4 seperate HTML and CSS elements that, when created with JavaScript DOM (a system to modify the content of a webpage after it has been loaded), is verbose and tedious. I wanted to create a system that would simplify the creation of elements back to a single function call. This aspect of the system functions brilliantly, and saves both development time and lines of code being written. <br>
+                However, I got a bit carried away and wanted to implement an object-based system that would allow me to read the values of inputs with far less effort. To cut a confusing and ultimately unnecessary story short, I didn't implement it very well and as such spent a lot of time on a feature that is broken and unusable. <br>
+                Eventually when I rewrite Phosphorus (as I imagine I inevitably will have to, given how quickly I'm learning new coding and design techniques), I'll fix all of these issues, but for the moment it functions well enough that I'm not terribly concerned about it. Plus, I'd spent nearly two months developing Phosphorus by the time I'd realised this and already rewritten the JavaScript twice, so was just about ready to move on and do something else.
+            </p>
+
+            <h2>To put a bow on it</h2>
+            <p>
+                There's a great deal more content I could dive into about Phosphorus that would be far too technical to explain here, and I could get nitpicky about all the things I'd change if I were to do it over, but instead I'll leave some final notes about what I've learned and what I'll improve in the future.
+            </p>
+
+            <div class="image-container">
+                <img src="../content/media/projects/phosphorus_5.png">
+                <p>
+                    The difference between Wolfram I and Wolfram V is so astounding that I wonder how I considered myself a designer 12 months ago.
+                </p>
+            </div>
+
+            <p>
+                From a design standpoint, my taste in design is evolving rapidly and as such Phosphorus will visually evolve over time. The above images showcases just how much Wolfram's design has evolved over the course of 2021 alone, so I'm sure everything will evolve in the future. <br>
+                Something I've already started designing is more unique interaction methods; and not just for the sake of having unique interaction methods. I keep coming back to it, but the vertical nav rail for the app discipline of Phosphorus is an example of making a newer, "riskier" interaction method, not to be unique for the sake of it, but to push the limits of user interfaces. <br>
+                Another thing that I'll be improving upon greatly in the future is personality: Wolfram V looks a little too "corporate-y" for my liking, and I'd like to come up with a healthy middle-ground between the [over-designed UI concept every Instagram designer loves] and the super-practical but really boring interfaces that is ever-present with Apple SwiftUI development, and I think that designing unique interface elements plays a big part in that. I like a functional webpage as much as the next guy but if I could do that while adding a bit more "indie flare" to it, I surely will.
+            </p>
+
+            <div class="image-container">
+                <img src="../content/media/projects/phosphorus_6.png">
+                <p>
+                    Yes, if you use a Taskmaster application on an iPhone with rounded corners, the corners of some elements will round to fit the phone. Yes, I spent far too long figuring out how to get it right.
+                </p>
+            </div>
+
+            <p>
+                From the perspective of the codebase, a lot of work can be done. One massive change I'll be making (perhaps before a major rewrite) is re-arranging the CSS codebase so that individual elements or element variations can be imported seperately. This would reduce page loading times by only loading necessary content, and reduce the overall project size by only having files for elements that are used. It would also mean that the variations of elements such as the nav can be imported seperately, removing the need for two explicit disciplines like there currently is. <br>
+                As I made clear, the JavaScript codebase needs a great deal of work. Unfortunately the current system is not something that can be easily retrofitted with a fixed codebase, so many of the current issues I'm having will have to wait to be addressed in Phosphorus II (whenever I decide it needs to be developed). <br> <br>
+
+                For the moment, however, Phosphorus is an excellent system considering it's my first real dive into a fully-developed design system. It's closed source and at work holding together my personal website, all the Taskmaster apps (including Wolfram), and any commissioned websites that I make.
+            </p>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer responsive">
+            <p>
+                This website was created using Phosphorus, my in-house web design engine. If you want a website just like this, I offer it as a service!
+            </p>
+            <a href="https://isaacshea.com/" target="_blank"><img src="../content/media/footer_image.png"></a>
+        </footer>
+    </body>
+</html>

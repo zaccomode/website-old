@@ -1,285 +1,145 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- META -->
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <!-- Browser -->
-        <title>About | Isaac Shea</title>
-        <link rel="icon" type="image/png" href="./content/favicon.png">
-        
-        <!-- Meta -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <!-- BROWSER -->
+        <title>Isaac Shea • About Me</title>
+        <link rel="icon" href="./content/media/favicon.png">
 
-        <meta name="description" content="I'm a Brisbane-based, self-taught graphic design and programming enthusiast.">
-        <meta name="keywords" content="Developer, Web Developer, Game Developer, Morgann, Gravity">
-
-        <!-- Social Media -->
-        <meta property="og:title" content="About | Isaac Shea">
-        <meta property="og:description" content="I'm a Brisbane-based, self-taught graphic design and programming enthusiast.">
-        <meta property="og:image" content="https://isaacshea.com/content/avatar.png">
-        <meta property="og:url" content="https://isaacshea.com/about">
-        <meta property="og:locale" content="en_AU">
+        <!-- SOCIAL MEDIA -->
+        <meta property="og:title" content="Isaac Shea • About Me">
+        <meta property="og:description" content="I'm Isaac Shea, a Brisbane-based IT & IxD student at QUT. I've been making content on the internet since 2015, experimenting with game development, brand design and full-stack development.">
+        <meta property="og:image" content="https://isaacshea.com/content/media/social_banner.png">
+        <meta property="og:url" content="https://isaacshea.com/about.html">
+        <meta property="og:type" content="website">
         <meta property="og:site_name" content="Isaac Shea">
+        <meta property="og:locale" content="en_AU">
 
         <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@zaccomode">
+        <meta name="twitter:creator" content="@zaccomode">
+        <meta name="twitter:title" content="Isaac Shea • About Me">
+        <meta name="twitter:description" content="I'm Isaac Shea, a Brisbane-based IT & IxD student at QUT. I've been making content on the internet since 2015, experimenting with game development, brand design and full-stack development.">
+        <meta name="twitter:image" content="https://isaacshea.com/content/media/social_banner.png">
+        
+        <!-- PHOSPHORUS -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <link rel="stylesheet" href="./phosphorus/framework.css">
+        <link rel="stylesheet" href="./phosphorus/web_framework.css">
+        <link rel="stylesheet" href="./phosphorus/dependencies.css">
+        <script src="./phosphorus/framework.js"></script>
+        <script src="./phosphorus/web_framework.js"></script>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="./css/about.css">
 
         <!-- JS -->
-        <script src="js/index.js"></script>
-        <script src="js/header.js"></script>
-        
-        <!-- CSS -->
+        <script src="./js/global.js"></script>
+        <script src="./js/contact.js"></script>
+
+        <!-- OTHER -->
         <script src="https://kit.fontawesome.com/3b3b5c1255.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-        
-        <link rel="stylesheet" href="./css/global.css">
-    </head>
+    </head> 
+
+    <body onload="loadFramework(); loadPage();">
     
-    <body>
-        <!-- Nav Bar -->
-        <nav class="nav">
-            <span class="material-icons-round" id="arrowDown" style="display: none">keyboard_arrow_down</span>
-            <img class="logo-primary" src="../content/favicon.png">
-            <div class="nav-buttons" id="nav-buttons">
-                <a class="button active" href="about.html">About</a>
-                <a class="button dropdown" id="projectsDropdownButton" onclick="projectsDropdown()">
-                    Projects
-                    <span class="material-icons-round">keyboard_arrow_down</span>
-                </a>
-                <a class="button dropdown" id="newsDropdownButton" onclick="newsDropdown()">
-                    News
-                    <span class="material-icons-round">keyboard_arrow_down</span>
-                </a>
-                
-                
-                <a class="button dropdown-mobile" href="projects.html">
-                    Projects
-                </a>
-                <a class="button dropdown-mobile" href="newsroom.html">
-                    News
-                </a>
-                
-                <a class="button icon">
-                    <span class="material-icons-round" href="javascript:void(0);" onclick="openNav()">drag_handle</span>
-                </a>
+        <!-- NAV -->
+        <nav class="nav responsive" id="nav">
+            <img src="./content/media/favicon.png">
+                                 
+            <div class="content-horizontal except become-mobile-sheet">
+                <a data-icon='home' class="button" href="..">Home</a>
+                <a data-icon='account_circle' class="button secondary outlined" href="./about.html">About</a>
+                <a data-icon='book' class="button" href="./blog.html">Blog</a>
             </div>
         </nav>
-        
-        <!-- Projects Subnav -->
-        <nav class="subnav" id="projectsSubnav">
-            <a class="button-card" id="project-1">
-                <div class="left">
-                    <img id="project-1-img" src="content/images/placeholder-imagelarge.png">
-                </div>
-                <div class="right">
-                    <h1 id="project-1-title">Project</h1>
-                    <p id="project-1-desc">Description</p>
-                </div>
-            </a>
-            <a class="button-card" id="project-2">
-                <div class="left">
-                    <img id="project-2-img" src="content/images/placeholder-imagelarge.png">
-                </div>
-                <div class="right">
-                    <h1 id="project-2-title">Project</h1>
-                    <p id="project-2-desc">Description</p>
-                </div>
-            </a>
-            <a class="button-card" id="project-3">
-                <div class="left">
-                    <img id="project-3-img" src="content/images/placeholder-imagelarge.png">
-                </div>
-                <div class="right">
-                    <h1 id="project-3-title">Project</h1>
-                    <p id="project-3-desc">Description</p>
-                </div>
-            </a>
-            <a class="button-card" id="project-4">
-                <div class="left">
-                    <img id="project-4-img" src="content/images/placeholder-imagelarge.png">
-                </div>
-                <div class="right">
-                    <h1 id="project-4-title">Project</h1>
-                    <p id="project-4-desc">Description</p>
-                </div>
-            </a>
-            
-            <div class="button-container">
-                <a class="button active" href="projects.html">
-                    See More
-                </a>
-            </div>
-        </nav>
-        
-        <!-- News Subnav -->
-        <nav class="subnav" id="newsSubnav">
-            <a class="button-card" id="news-1">
-                <div class="left">
-                    <img id="news-1-img" src="content/images/placeholder-imagelarge.png">
-                </div>
-                <div class="right">
-                    <h1 id="news-1-title">Project</h1>
-                    <p id="news-1-desc">Description</p>
-                </div>
-            </a>
-            
-            <a class="button-card" id="news-2">
-                <div class="left">
-                    <img id="news-2-img" src="content/images/placeholder-imagelarge.png">
-                </div>
-                <div class="right">
-                    <h1 id="news-2-title">Project</h1>
-                    <p id="news-2-desc">Description</p>
-                </div>
-            </a>
-            
-            <a class="button-card" id="news-3">
-                <div class="left">
-                    <img id="news-3-img" src="content/images/placeholder-imagelarge.png">
-                </div>
-                <div class="right">
-                    <h1 id="news-3-title">Project</h1>
-                    <p id="news-3-desc">Description</p>
-                </div>
-            </a>
-            
-            <a class="button-card" id="news-4">
-                <div class="left">
-                    <img id="news-4-img" src="content/images/placeholder-imagelarge.png">
-                </div>
-                <div class="right">
-                    <h1 id="news-4-title">Project</h1>
-                    <p id="news-4-desc">Description</p>
-                </div>
-            </a>
-            
-            <div class="button-container">
-                <a class="button active" href="newsroom.html">
-                    See More
-                </a>
-            </div>
-        </nav>
-        
-        <!-- Full-Page Nav -->
-        <div id="fullPageNav" class="full-page-nav">
-            <a class="button icon">
-                    <span class="material-icons-round" href="javascript:void(0);" onclick="closeNav()">close</span>
-                </a>
-            
-            <div id="navContent" class="nav-content">
-                <a class="button active" href="about.html">About</a>
-                <a class="button" href="projects.html">Projects</a>
-                <a class="button" href="newsroom.html">News</a>
 
-                <div class="social-icons">
-                    <a href="https://github.com/Isaac-Shea" class="button icon" target="_blank"> 
-                        <i class="fab fa-github" style="font-size: 20px"></i></a>
-                    <a href="https://www.youtube.com/channel/UC15Ipgy22HdeOEVs_NRmjig?view_as=subscriber" class="button icon" target="_blank"> 
-                        <i class="fab fa-youtube" style="font-size: 20px"></i></a>
-                    <a href="https://www.instagram.com/theisaacshea/" class="button icon" target="_blank">
-                        <i class="fab fa-instagram" style="font-size: 20px"></i></a>
-                    <a href="https://twitter.com/IsaacShea1" class="button icon" target="_blank">
-                        <i class="fab fa-twitter" style="font-size: 20px"></i></a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Anchor Indicator -->
-        <div class="anchor-indicator">
-            <p class="subtitle">About //</p>
-            <span class="material-icons-round">account_circle</span>
-        </div>
-        
-        <!-- Page Header -->
-        <header class="header small">
-            <div class="header-halves">
-                <div class="header-left">
-                    <img class="avatar-primary" src="./content/images/about-header.png"> 
-                </div>
+        <!-- HEADER -->
+        <header class="header responsive">
+            <h1>A little bit about me</h1>
 
-                <div class="header-right">
-                    <div class="header-text">
-                        <h1 class="title">About Me</h1>
-                    </div>
-                    <h1 class="header-background">//</h1>
-                </div>
-            </div>
+            <p>
+                I'm a Brisbane-based IT & IxD student at QUT. I've been making content on the internet since 2015, experimenting with game development, brand design and full-stack development.
+                <br> <br>
+                I've become proficient in Python, SQL, HTML, CSS, JavaScript and Node.JS, specializing in user interaction and experience. I also have experience in brand design, with some of my work being used by car restorers and ending up on the side of mining equipment!
+                <br> <br>
+                At the moment I'm exploring the possibilities of web-based UX with my own design engine Phosphorus, and using the full-stack development workflow to build a series of free, openly-researched applications under the brand of <a href="https://taskmaster.cc/" target="_blank">Taskmaster</a>, the first application of which, Wolfram, is available now.
+            </p>
         </header>
-        
-        <!-- Page Content -->
-        <main class="page-content">
-            
-            <!-- Intro Content -->
-            <div class="page-section alt border">
-                <div class="section-left">
-                    <h2>I Make Stuff</h2>
-                    <p class="subtitle">That's Cool, Right? //</p>
-                </div>
-                <div class="section-right">
-                    <p>
-                        I’m a Brisbane-based, self-taught graphic design and programming enthusiast. I’ve been making content on the internet since 2015, and have always loved the intersection between technical computing and user experience.
-                        <br>
-                        <br>
-                        I’ve made a game, two Discord bots, multiple websites and various designs, commissions and not. My interests are wide, and I enjoy learning new things. I’m familiar with C#, Python, HTML, CSS, and JavaScript.
 
-                    </p>
-                </div>
-            </div>
-            
-            <!-- Story Content -->
-            <div class="page-section border">
-                <div class="section-left alt">
-                    <h2>My Story</h2>
-                    <h1 class="section-background">&lt;/&gt;</h1>
-                </div>
-                <div class="section-right">
-                    <p>
-                        I started making content on the novice programming site Scratch in 2015 with basic interface examples, but after I became bored of that I challenged myself to develop a game over the Christmas break of 2016/17. From there, I began development of my first (and to date only) game, Gravity, 
-                        <br>
-                        <br>
-                        I continued the development of Gravity for nearly 3 years, finishing it in late 2019 (you can read about the whole story <a href="./projects/gravity.html">here</a>). 
-                        <br>
-                        <br>
-                        In 2020, I had far too much time on my hands, being stuck at home and all, and decided to take up learning Python with the sole intention of heartlessly insulting my friends (which you can read about <a href="./projects/morgann.html">here</a>), and found a love for UI & UX design, which I’d like to focus on largely in 2021.
+        <main class="main responsive">
+            <div class="sep horizontal"></div>
 
-                    </p>
-                </div>
-            </div>
+            <h1>How I got here</h1>
+            <p>
+                I started back in 2015 on the novice programming site Scratch making small interface mockups, but after I became bored of that I challenged myself to make a game over the Christmas holidays over 2016/17.
+                <br> <br>
+                From there, I began to develop my first (and only) game, Gravity, which I spent another three years working on before finishing it in late 2019. I developed all the art, code and music for the game. When I started the project I was 13. Gravity is still available on the Google Play Store if you'd like to play it. 
+                <br> <br>
+                In 2020, my horizons started expanding as I left game development in favour of building Discord bots with Python. My favourite bot was Morgann, which I developed during the Queensland lockdowns in April 2020 to heartlessly insult my friends. <br>
+                Also in 2020 I learned HTML, CSS and JavaScript to start building my website from scratch (I had been using Wix up until this point). Ever since, every website I've made has been built from the ground up.
+                <br> <br>
+                2021 saw me leave Python development behind almost entirely as I leaned heavily into web development and started university. I started the year by developing Adrodex (now the Shea Marketplace), an online marketplace with a server built using Node.JS and Express.JS. <br>
+                In June I started to take a laser focus to my health (something I'd more or less neglected in years prior), and used my new knowledge of Node.JS to build Wolfram, an all-in-one workout generator application. <br>
+                Wolfram is now part of the Taskmaster suite, which is a suite of applications designed to bring Wolfram's wisdom to other aspects of my life, such as diet and organisation. <br>
+                To help me develop the Taskmaster suite, and to consolidate everything I've learned about UI & UX, I developed Phosphorus, an in-house web design framework for websites and webapps. It's now used for everything I make - even this website is made with it!
+            </p>
+
             
-            <!-- Contact Content -->
-            <div class="page-section alt">
-                <div class="section-left alt">
-                    <h2>Contact Me</h2>
-                    <h1 class="section-background">&lt;/&gt;</h1>
+            <h1>What I'm up to now</h1>
+            <p>
+                Having finished Wolfram V in December 2021, I'm now moving to the second and diet-focused Taskmaster application, Polymer. I have no concrete timeline for when this will see the light of day, but I'm hoping to have it for the most part done by late 2022. 
+                <br> <br>
+                I'm also becoming increasingly interested in the hardware side of electronics, which I haven't really explored before. I'm not sure exactly what I'll do with it, but I'm beginning to explore it nonetheless.
+                <br> <br>
+                The second year of my university course is due to start in February, so once it starts back again this site may become less active, but I'd like to keep consistent updates going on the blog or my Instagram.
+            </p>
+
+            <div class="sep horizontal"></div>
+
+            <h1>Get in touch</h1>
+            <p>
+                If you want to work with me, have questions about my projects, or just want to get in touch, you can use the form below, or contact me directly through my email (<a href="mailto:isaac@sheamgt.com">isaac@sheamgt.com</a>) I'll respond to as many geniune messages as I can.
+            </p>
+
+            <!-- CONTACT FORM -->
+            <div class="content-vertical content-input">
+                <div class="input text" id="contact-name">
+                    <input type="text" maxlength="50" placeholder="Name...">
+                    <button class="button icon text-clear">
+                        <span class="material-icons-round">clear</span>
+                    </button>
                 </div>
-                <div class="section-right">
-                    <p>
-                        If you’d like to contact me, you can do so through my email (<a href="mailto:isaac_shea@icloud.com">isaac_shea@icloud.com</a>), or by direct messaging any of my social media accounts. I’ll respond to as many genuine communications as I can.
-                    </p>
+
+                <div class="input text" id="contact-email">
+                    <input type="text" placeholder="Contact email...">
+                    <button class="button icon text-clear">
+                        <span class="material-icons-round">clear</span>
+                    </button>
                 </div>
+
+                <div class="input textarea" id="contact-message">
+                    <textarea placeholder="Introductory message..."></textarea>
+                </div>
+                <p class="label">
+                    All items are required.
+                </p>
+
+                <button class="button secondary outlined" onclick="sendEmail();" id="contact-button">Send</button>
+                <p class="label" id="contact-alert"></p>
             </div>
-            
         </main>
-        
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-social-icons">
-                <a href="https://github.com/zaccomode" class="button alt icon" target="_blank"> 
-                    <i class="fab fa-github" style="font-size: 20px"></i></a>
-                <a href="https://www.youtube.com/channel/UC15Ipgy22HdeOEVs_NRmjig?view_as=subscriber" class="button alt icon" target="_blank"> 
-                    <i class="fab fa-youtube" style="font-size: 20px"></i></a>
-                <a href="https://www.instagram.com/zaccomode/" class="button alt icon" target="_blank">
-                    <i class="fab fa-instagram" style="font-size: 20px"></i></a>
-                <a href="https://twitter.com/zaccomode" class="button alt icon" target="_blank">
-                    <i class="fab fa-twitter" style="font-size: 20px"></i></a>
-            </div>
-            <div class="footer-text">
-                <a href="legal.html">Privacy & Legal</a>
-                <img class="footer-favicon" src="content/favicon.png">
-                <p>© Isaac Shea, 2021</p>
-            </div>
+
+        <!-- FOOTER -->
+        <footer class="footer responsive">
+            <p>
+                This website was created using Phosphorus, my in-house web design engine. If you want a website just like this, I offer it as a service!
+            </p>
+            <a href="https://isaacshea.com/" target="_blank"><img src="./content/media/footer_image.png"></a>
         </footer>
     </body>
 </html>

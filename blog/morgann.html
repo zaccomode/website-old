@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- META -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- BROWSER -->
+        <title>Morgann • I got bored • Isaac Shea</title>
+        <link rel="icon" href="../content/media/favicon.png">
+
+        <!-- SOCIAL MEDIA -->
+        <meta property="og:title" content="Morgann • I got bored • Isaac Shea">
+        <meta property="og:description" content="Have you every felt like being a pain to your friends is just too much effort? Like there was a way to... automate insults?">
+        <meta property="og:image" content="https://isaacshea.com/content/media/projects/morgann_2.png">
+        <meta property="og:url" content="https://isaacshea.com/blog/morgann.html">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Isaac Shea">
+        <meta property="og:locale" content="en_AU">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@zaccomode">
+        <meta name="twitter:creator" content="@zaccomode">
+        <meta name="twitter:title" content="Morgann • I got bored • Isaac Shea">
+        <meta name="twitter:description" content="Have you every felt like being a pain to your friends is just too much effort? Like there was a way to... automate insults?">
+        <meta name="twitter:image" content="https://isaacshea.com/content/media/projects/morgann_2.png">
+        
+        <!-- PHOSPHORUS -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <link rel="stylesheet" href="../phosphorus/framework.css">
+        <link rel="stylesheet" href="../phosphorus/web_framework.css">
+        <link rel="stylesheet" href="../phosphorus/dependencies.css">
+        <script src="../phosphorus/framework.js"></script>
+        <script src="../phosphorus/web_framework.js"></script>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="../css/blog.css">
+
+        <!-- JS -->
+        <script src="../js/global.js"></script>
+
+        <!-- OTHER -->
+        <script src="https://kit.fontawesome.com/3b3b5c1255.js" crossorigin="anonymous"></script>
+    </head> 
+
+    <body onload="loadFramework();">
+    
+        <!-- NAV -->
+        <nav class="nav responsive" id="nav">
+            <img src="../content/media/favicon.png">
+                                 
+            <div class="content-horizontal except become-mobile-sheet">
+                <a data-icon='home' class="button" href="..">Home</a>
+                <a data-icon='account_circle' class="button" href="../about.html">About</a>
+                <a data-icon='book' class="button secondary outlined" href="../blog.html">Blog</a>
+            </div>
+        </nav>
+
+        <!-- HEADER -->
+        <header class="header responsive">
+            <img src="../content/media/projects/morgann_2.png">
+        
+            <h1>Morgann • I got bored</h1>
+            <h4>02.06.2020</h4>
+
+            <div class="chip-content">
+                <div class="chip highlight">Legacy Project</div>
+                <div class="chip">Discord Bot</div>
+                <div class="chip">Machine Learning/AI</div>
+            </div>
+
+            <p><b>
+                Have you every felt like being a pain to your friends is just too much effort? Like there was a way to... automate insults? <br>
+                A common issue, I know. With the world in lockdown and nothing better to do, my friends and I took to insulting one particular friend at every chance we got, which naturally led to the need for an automated system to handle it when we couldn't.
+            </b></p>
+        </header>
+
+        <!-- CONTENT -->
+        <main class="main responsive">
+            <p>
+                I set it up so whenever he would post a message to our group server on Discord (basically a voice and text-messaging service, for those who don't know), Morgann would automatically reply with a random insult from the list I gave him. <br>
+                Already, this was a brilliant addition to our server, but I wanted to take this a step further. So, naturally, I added a bunch of features.
+            </p>
+
+            <ul>
+                <li>
+                    <b>Adding insults:</b> I was sick of having to manually add insults to a save file myself, so I gave everyone the power to.
+                </li>
+                <li>
+                    <b>Adding quotes:</b> Late-night gaming sessions lead to some cracking quotes being said, and naturally we needed a system to store and show them on demand.
+                </li>
+                <li>
+                    <b>Targeting someone else:</b> Throwing insults at one friend is fun enough, but eventually we had the need to insult other people, so I let Morgann target other people, too.
+                </li>
+            </ul>
+            
+            <p>
+                This all went well, however I had a couple of serious problems beginning to arise. <br>
+                First of all, I was running the entirety of Morgann off of my computer, which meant that once I went to bed other people couldn't add insults or target people. And because nobody except me has a normal sleeping pattern, this became a problem. <br>
+                Secondly, everything was stored inside a couple of .txt files on my hard drive, which meant it was very easy to corrupt data if something went wrong. <br>
+                And lastly, I thought other people would want to have Morgann on their servers, and because all the save data was global, I had a serious privacy issue. <br> <br>
+
+                It was fairly obvious to me that Morgann was in dire need of a rework, and so I set about doing this. There was a couple of things I wanted to change the second time around, though:
+            </p>
+
+            <ul>
+                <li>
+                    <b>Planning:</b> The original Morgann was built around me learning Python, which meant it was messy and janky like nothing else, so I wanted to fix that with the rework.
+                </li>
+                <li>
+                    <b>Saving:</b> My biggest concern with storing everything in .txt files is that they cannot handle asynchronous saving requests. Because Discord handles messages asynchronously, though, this could cause a serious problem if two people were to add an insult at the same time because corruption and stuff.
+                </li>
+                <li>
+                    <b>Moderator tools:</b> It had become clear to me by this point that Morgann could get fairly intrusive, so I wanted to allow moderators to dial back his annoyance if need be.
+                </li>
+            </ul>
+
+            <p>
+                To fix the biggest of these issues, saving, I decided to use a fully-fledged database to store everything, and eventually settled on an SQL database hosted through Heroku. Heroku is super neat because it hosts Morgann and the database, and I can access the database from on my computer, which meant I didn't have to guess how Morgann would function before uploading it. Also, it's free. <br> <br>
+
+                So with that sorted, I got to work on the new update, and less than a month later I had, for the most part completed, Morgann, with the following features added:
+            </p>
+
+            <ul>
+                <li>
+                    <b>Removing insults & quotes:</b> Everyone knows that one guy who always comes up with the worst stuff to add to the insult list (at least, I do), so I had to add the ability for moderators to remove insults and quotes.
+                </li>
+                <li>
+                    <b>Random insults & quotes:</b> I'm not really sure about the logic behind the random insults, but it's basically the target feature but on-demand, I guess?
+                </li>
+                <li>
+                    <b>Insult & quote searching:</b> This one ties fairly closely into removing, because when you have 80 insults and quotes, things can get a bit hectic when randomly finding insults.
+                </li>
+                <li>
+                    <b>Other mod tools:</b> The people needed them, so I gave the ability to limit Morgann to a specific channel and add other roles to utilise mod tools (normally only server owners can use them).
+                </li>
+            </ul>
+
+            <div class="sep horizontal"></div>
+
+            <p>
+                In the end, I learned quite a large amount from this project, actually. <br>
+                Firstly, I pretty much learned Python over the course of about a month and a half to code Morgann, so that was nice. Additionally, I realised that quick project turnaround was a huge plus, and it allowed me to move onto other projects and experiment with different things. <br> <br>
+
+                So that's all there is to know about Morgann, really. He was never really intended to be much in the way of usefulness, but through him I learned a bunch and made my friends laugh, so I see that as a win-win.
+            </p>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer responsive">
+            <p>
+                This website was created using Phosphorus, my in-house web design engine. If you want a website just like this, I offer it as a service!
+            </p>
+            <a href="https://isaacshea.com/" target="_blank"><img src="../content/media/footer_image.png"></a>
+        </footer>
+    </body>
+</html>
