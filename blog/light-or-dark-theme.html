@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- META -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- BROWSER -->
+        <title>Light vs. dark theme: which is better? • Isaac Shea</title>
+        <link rel="icon" href="../content/media/favicon.png">
+
+        <!-- SOCIAL MEDIA -->
+        <meta property="og:title" content="Light vs. dark theme: which is better? • Isaac Shea">
+        <meta property="og:description" content="I've seen many debates as to which theme is the 'superior', and which should be designed for. Let's break down the psychology of each to see which your application should use.">
+        <meta property="og:image" content="https://isaacshea.com/content/media/blog/light_or_dark_theme_1.png">
+        <meta property="og:url" content="https://isaacshea.com/blog/light-or-dark-theme.html">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Isaac Shea">
+        <meta property="og:locale" content="en_AU">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@zaccomode">
+        <meta name="twitter:creator" content="@zaccomode">
+        <meta name="twitter:title" content="Light vs. dark theme: which is better? • Isaac Shea">
+        <meta name="twitter:description" content="I've seen many debates as to which theme is the 'superior', and which should be designed for. Let's break down the psychology of each to see which your application should use.">
+        <meta name="twitter:image" content="https://isaacshea.com/content/media/blog/light_or_dark_theme_1.png">
+        
+        <!-- PHOSPHORUS -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <link rel="stylesheet" href="../phosphorus/framework.css">
+        <link rel="stylesheet" href="../phosphorus/web_framework.css">
+        <link rel="stylesheet" href="../phosphorus/dependencies.css">
+        <script src="../phosphorus/framework.js"></script>
+        <script src="../phosphorus/web_framework.js"></script>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="../css/blog.css">
+
+        <!-- JS -->
+        <script src="../js/global.js"></script>
+
+        <!-- OTHER -->
+        <script src="https://kit.fontawesome.com/3b3b5c1255.js" crossorigin="anonymous"></script>
+    </head> 
+
+    <body onload="loadFramework();">
+    
+        <!-- NAV -->
+        <nav class="nav responsive" id="nav">
+            <img src="../content/media/favicon.png">
+                                 
+            <div class="content-horizontal except become-mobile-sheet">
+                <a data-icon='home' class="button" href="..">Home</a>
+                <a data-icon='account_circle' class="button" href="../about.html">About</a>
+                <a data-icon='book' class="button secondary outlined" href="../blog.html">Blog</a>
+            </div>
+        </nav>
+
+        <!-- HEADER -->
+        <header class="header responsive">
+            <img src="../content/media/blog/light_or_dark_theme_1.png">
+        
+            <h1>Light vs. dark theme: which is better?</h1>
+            <h4>25.01.2022</h4>
+
+            <div class="chip-content">
+                <div class="chip highlight">Breakdown</div>
+                <div class="chip">Design</div>
+                <div class="chip">UI/UX</div>
+            </div>
+
+            <p>
+                Photo by <a href="https://unsplash.com/@glvrdru" target="_blank">Maxim Ilyahov</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>, edited for use.
+            </p>
+
+            <p><b>
+                In 2018, Apple unveiled MacOS 10.14 Mojave at their World-Wide Developers Conference (WWDC), and with it a system-wide Dark Mode. A year later in 2019 this feature was ported across to iOS and iPadOS 13 with the ability for it to automatically change between light (or regular) and dark themes based on the time of day.
+            </b></p>
+        </header>
+
+        <!-- CONTENT -->
+        <main class="main responsive">
+            <p>
+                Apple was of course not the first, nor only, tech developer to introduce a dark theming for their products. As of 2022, essentially every major operating system for both desktop and mobile-class devices have a light/dark theme feature, often with an automatic changing feature as well.<br> <br>
+
+                Since then, I've experienced a fair bit of debate as to which theme is the 'superior' theme to design and develop for, or which should be the default to appear. To set the record straight up top, I think it's important to realise that both are equal, in that both have pros and cons for usage. That being said, I'd like to explain why I believe that designing for light-theme as a default (in most cases, and we'll get to some exceptions in a bit). <br> <br>
+
+                Last year (2021), the online chat site Discord announced a major redesign of their marketing and application, with the introduction of a new logo, typeface and brand colours. While the vast majority of the changes they made were met with major pushback from the community (and for a valid reason, <a href="https://support.discord.com/hc/en-us/community/posts/1500001019322-Discord-s-new-redesign" target="_blank">see this support message</a>), one change that I believe was good for usability was the change from a dark theme by default to a light theme by default. 
+                To understand why I believe this was a good decision, let's break down the reasons that light themes are so prevalent across user interfaces. 
+            </p>
+            <ul>
+                <li>
+                    A page with light backgrounds and dark text is familiar: its very similar to how printed paper generally appear (black text on white paper). This is perhaps because of the inherent usability advantage of having a black-on-white contrast setup;
+                </li>
+                <li>
+                    It's far easier to read black-on-white text than white-on-black text in lighter environments (which most people operate within most of the time). White-on-black interfaces in light environments require users to focus and/or squint at them to make out important details, which can be inconvenient when a user wants to see information quickly, or dangerous if they're doing something else that their attention is diverted from.
+                </li>
+            </ul>
+
+            <div class="image-container">
+                <img src="../content/media/blog/light_or_dark_theme_2.png">
+                <p>
+                    Discord's 2021 redesign (bottom right) was a controversial one within the community, but it definitely pushed a 'friendlier' vibe to new users. It's worth noting that the screenshots on the left are both from the post-2021 redesign, just comparing light and dark theme.
+                </p>
+            </div>
+
+            <p>
+                The advantage of familiarity is, I think, why Discord moved to a light-default interface. As the previously linked post points out, it seems accessibility is not *that* high on their design team's concerns, however gaining reputability certainly is. As part of their infamous redesign, they moved away from gaming-centric marketing (which was the reason it started and rose to popularity), opting to market towards general communities. <br>
+                An integral move in this was to change the theme to promote space and trustworthiness in their application.
+                The old, darker interface definitely suited the personality and needs of gamers, however meant wider communities had a difficult time using Discord as it felt untrustworthy or 'sketchy'. I know this because it took me a few weeks to become comfortable with Discord when I started using it to find coding communities way back in 2016. <br> <br>
+
+                So, if designing for light theme has these apparent advantages, why should we even consider dark mode? The short answer is because people got sick of opening Instagram at 1AM and their phone lighting up like a flash grenade. <br> 
+                The long answer is an extension of the latter dot point from above: in the same way that it's easier to read black-on-white text in light environments, it's far less strain on the eyes to read white-on-black text in dark environments. <br> 
+                Designing an interface that has the capability to switch between dark and light themes to match a user's environment (especially automatically) is a huge step forward in UX. It means users can view interfaces in dark environments without having to lower the screen's brightness, which can reduce important details like contrast and colour. <br> <br>
+
+                As a final point, I'd like to discuss some notable exceptions to a light-first theming that work for the brand of an interface. Streaming services like Netflix and Disney+ have a dark-first theme that replicates the 'dark room' feel of a cinema. This, combined with a very minimalist interface and palette, help the colours of the promotional imagery pop in the same way that a cinema does.
+            </p>
+
+            <div class="image-container">
+                <img src="../content/media/blog/light_or_dark_theme_3.png">
+                <p>
+                    Disney+ makes heavy use of a minimalist interface, allowing most of the colour shown to come from the promotional material for movies, just like a real cinema. And yes, I watch a lot of Marvel movies.
+                </p>
+            </div>
+
+            <p>
+                But what about viewability in lighter environments? It's a fair assumption on their design team's part to assume their users would either use their interface in a darker environment (a living room or home cinema prepped for watching a movie), or are more willing to squint at the interface in light environments (the brightness of movies is generally about the same as a dark interface, meaning users would be squinting at the movie as well). <br> <br>
+
+                To summarise, as with everything in design, it depends on the use case of your application as to which theme should be the default. As a general rule of thumb, I tend to design to accommodate both light and dark themes, and use builtin CSS functions to switch theme when a user's system theme changes, however the applications I build are designed to be used pretty much everywhere, thus my opinion is not a steadfast rule. If your brand permits it, definitely design for both - the usability improvements are excellent for end users, and a well-built design system should be able to implement them relatively easily.
+            </p>
+
+            <h2>Some further reading</h2>
+            <ul>
+                <li>
+                    <a href="https://lithiosapps.com/usability-in-design-dark-mode-vs-light-mode/" target="_blank"><b>Usability is Design: Dark Mode vs. Light Mode</b> by LithiosApps</a> - This article offers an excellent introduction to designing for light and dark themes, as well as a brief history of both that I didn't cover here. 
+                </li>
+                <li>
+                    <a href="https://material.io/design/color/dark-theme.html" target="_blank"><b>Dark Theme</b> by Material Design</a> - This Material Design article is another excellent resource for building for dark theme, and this website as a whole is a great resource for UI/UX designers.
+                </li>
+            </ul>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer responsive">
+            <p>
+                This website was created using Phosphorus, my in-house web design engine. If you want a website just like this, I offer it as a service!
+            </p>
+            <a href="https://isaacshea.com/" target="_blank"><img src="../content/media/footer_image.png"></a>
+        </footer>
+    </body>
+</html>
