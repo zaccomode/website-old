@@ -6,6 +6,8 @@ h4 {
 }
 h2 { margin-bottom: 0px; }
 p, li { 
+    font-family: "Serif", sans-serif;
+
     font-size: 18px;
     line-height: 25px;
 }
