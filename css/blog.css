@@ -12,7 +12,7 @@ p, li {
     line-height: 25px;
 }
 li { margin-bottom: 5px; }
-ul { margin-top: 0px; }
+ol, ul { margin: 0px; }
 
 
 
@@ -52,8 +52,32 @@ ul { margin-top: 0px; }
     /* box-shadow: 0px 0px 40px rgba(0,0,0,0.25); */
 }
 .image-container > p { 
-    transform: skewX(-8deg);
     font-size: 15px;
     line-height: 20px;
     margin-bottom: 0px;
+
+    background-color: var(--tertiary25);
+    color: var(--tertiary75);
+
+    font-style: italic;
+
+    border-radius: var(--cornerRounding);
+    border-left: var(--cornerRounding) solid var(--tertiary25);
+    padding: 10px 10px 10px 20px;
+}
+
+
+
+/* -- PARAGRAPH EFFECTS -- */
+p.note { 
+    margin: 0px;
+
+    background-color: var(--tertiary25);
+    color: var(--tertiary75);
+
+    font-style: italic;
+
+    border-radius: var(--cornerRounding);
+    border-left: var(--cornerRounding) solid var(--tertiary25);
+    padding: 10px 10px 10px 20px;
 }

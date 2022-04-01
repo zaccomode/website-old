@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- META -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- BROWSER -->
+        <title>Why I'm changing my tech stack • Isaac Shea</title>
+        <link rel="icon" href="../content/media/favicon.png">
+
+        <!-- GOOGLE ANALYTICS -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNM70EHFT2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-HNM70EHFT2');
+        </script>
+
+        <!-- SOCIAL MEDIA -->
+        <meta property="og:title" content="Why I'm changing my tech stack • Isaac Shea">
+        <meta property="og:description" content="I started to seriously teach myself web design about three years ago now, and this year I'm once again reinventing my development stack to use a JavaScript-first approach.">
+        <meta property="og:image" content="https://isaacshea.com/content/media/blog/changing_tech_stacks_1.png">
+        <meta property="og:url" content="https://isaacshea.com/blog/changing-tech-stack.html">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Isaac Shea">
+        <meta property="og:locale" content="en_AU">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@zaccomode">
+        <meta name="twitter:creator" content="@zaccomode">
+        <meta name="twitter:title" content="Why I'm changing my tech stack • Isaac Shea">
+        <meta name="twitter:description" content="I started to seriously teach myself web design about three years ago now, and this year I'm once again reinventing my development stack to use a JavaScript-first approach.">
+        <meta name="twitter:image" content="https://isaacshea.com/content/media/blog/changing_tech_stacks_1.png">
+        
+        <!-- PHOSPHORUS -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <link rel="stylesheet" href="../phosphorus/framework.css">
+        <link rel="stylesheet" href="../phosphorus/web_framework.css">
+        <link rel="stylesheet" href="../phosphorus/dependencies.css">
+        <script src="../phosphorus/framework.js"></script>
+        <script src="../phosphorus/web_framework.js"></script>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="../css/blog.css">
+
+        <!-- JS -->
+        <script src="../js/global.js"></script>
+
+        <!-- OTHER -->
+        <script src="https://kit.fontawesome.com/3b3b5c1255.js" crossorigin="anonymous"></script>
+    </head> 
+
+    <body onload="loadFramework();">
+
+        <div class="cookie-consent responsive-margin" id="cookie-consent">
+            <div class="highlighter"></div>
+            <p>Hey! This website uses cookies for analytics.</p>
+            <div class="cookie-consent-buttons">
+                <a href="./why-use-cookies.html" class="button icon"><span class="material-icons-round">info</span></a>
+                <button class="button icon" onclick="destroyCookieConsent();"><span class="material-icons-round">close</span></button>
+            </div>
+        </div>
+    
+        <!-- NAV -->
+        <nav class="nav responsive-margin" id="nav">
+            <img src="../content/media/favicon.png">
+                                 
+            <div class="content-horizontal except become-mobile-sheet">
+                <a data-icon='home' class="button" href="..">Home</a>
+                <a data-icon='account_circle' class="button" href="../about.html">About</a>
+                <a data-icon='book' class="button secondary outlined" href="../blog.html">Blog</a>
+            </div>
+        </nav>
+
+        <!-- HEADER -->
+        <header class="header responsive">
+            <img src="../content/media/blog/changing_tech_stacks_1.png">
+        
+            <h1>Why I'm changing my tech stack</h1>
+            <h4>22.03.2022</h4>
+
+            <div class="chip-content">
+                <div class="chip highlight">Update</div>
+                <div class="chip">Tech Stack</div>
+                <div class="chip">UI/UX</div>
+            </div>
+
+            <p><b>
+                I started to seriously teach myself web design about three years ago now, and quickly became fluent in HTML and CSS, with a basic understanding of  JS. Last year, I took a serious look at server-side JavaScript with Node.JS and Express.JS. This year, I'm once again reinventing my development stack to use a JavaScript-first approach. Let's dive into why I'm doing this, and what it's going to look like in my future projects.
+            </b></p>
+        </header>
+
+        <!-- CONTENT -->
+        <main class="main responsive">
+            <h2>What I'm currently using</h2>
+            <p>
+                As I mentioned up top, I currently have a basic yet verbose development stack; I use vanilla HTML, CSS and JS to build the clients of applications, and then Node.JS (with the help of Express) to construct the servers.
+            </p>
+
+            <p class="note">
+                For the sake of conciseness, I'm going to call HTML, CSS and JavaScript the Vanilla Trio from here on out.
+            </p>
+
+            <p>
+                As far as web development goes, there's not much abstraction there, which for a long time I boasted as an advantage to my workflow. While my peers and friends were beginning to use design and JavaScript frameworks to handle the heavy lifting of web development, I leveraged the fact that I operated close to the "bare metal" of a browser to build my own abstraction layers on top of vanilla languages, hence the existence of systems like my design engine, <a href="./phosphorus.html">Phosphorus</a>.
+            </p>
+
+            <p class="note">
+                A quick note: I'm fully aware that by saying I work close to "bare metal", it may be implying  that I work close to a system level; this is untrue. What I mean is that I don't use any other packages here to abstract the complexity and tediousness of working with the Vanilla Trio.
+            </p>
+
+            <p>
+                Why was I on such a mission to keep using the Vanilla Trio? There are a few reasons, a couple of which I outline in my Phosphorus post:
+            </p>
+            <ol>
+                <li>
+                    <b>The design-develop flow is straightforward:</b> I like to design everything down to the pixel, and having absolute control over the HTML and CSS allows me to create <i>exactly</i> what I want to see.
+                </li>
+                <li>
+                    <b>I've built tools to help me:</b> I spent nearly 3 months last year building Phosphorus to help my previous point become even easier. In some respects, it worked! In others, it's failed miserably (more on that soon).
+                </li>
+                <li>
+                    <b>It was a (nerdy) flex:</b> for some reason, the difficulty of using the Vanilla Trio means that when you say "this was made entirely with vanilla CSS", it comes across as kind of cool.
+                </li>
+                <li>
+                    <b>I didn't want to learn something new:</b> as you may have guessed by now, my ego is a <i>bit</i> too large for me to want to branch out beyond what I knew, and I thought that what I had was working well enough.
+                </li>
+            </ol>
+
+            <h2>Why I started thinking about moving</h2>
+            <p>
+                When I started work on Wolfram V (the first app to use Phosphorus), I noticed a massive flaw in how I'd developed Phosphorus; my JavaScript abstraction was <i>terrible</i>. <br>
+                Phosphorus creates HTML elements as a sub-object of it's overrarching "Ph-[Object]" class. The idea was to have each of an element's attributes exposed in an object-oriented fashion (ie. <code>textInput.value</code> would return a live update of what a user may be typing). Unfortunately, I didn't implement it nearly well enough, and the HTML element's values are only correctly recorded when the object is created, meaning any change to the element afterwards would ruin the object's consistency. <br>
+                This was a huge oversight in my behalf, but I had already spent 3 months working on this one godforsaken system, and really didn't want to have to sit down and rewrite it. And for what? Chances are I'd find other issues with it later, so I decided to press on with a workaround: instead of using <code>textInput.value</code>, I could use <code>textInput.html</code> To retrieve a reference to the HTML object, then interact with the DOM as I would usually. <br>
+                In the end, this is barely better than interacting with raw DOM methods, which are infamously bad.
+                <br> <br>
+
+                Another big push was my university course; one of my IT classes is teaching React, and upon looking into it I was amazed by it. I was initially impressed by its JavaScript-first approach, as well as JSX (that is, HTML-like code that is written directly within JS), which made DOM interaction concise and easy. <br>
+                Then a friend showed me to <a href="https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA" target="_blank">Fireship</a>, a web development YouTuber who posts short but highly dense JavaScript tutorials (among other things), and I started to really discover how how inefficient my current stack is.
+            </p>
+
+            <div class="image-container">
+                <img src="../content/media/blog/changing_tech_stacks_2.png">
+                <p>
+                    This is a concept of what I'm calling Phosphorus-M - a variant of Phosphorus built on top of Mantine.
+                </p>
+            </div>
+
+            <h2>So, what's my new stack going to look like?</h2> <br>
+            <p class="note">
+                It's worth mentioning that I'm yet to build a full-scale project with what I've mentioned here, so this is very likely to change in practice.
+            </p>
+            <p>
+                First and foremost: the client is going to be <a href="https://reactjs.org/" target="_blank">React</a>-based. I want to leverage that it natively compiles <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>, which means I can write TS instead of JS. From my reading and limited testing, the debugging and IDE advantages of TypeScript over JavaScript make it something I'd really like to use. <br>
+                For the first time ever, I'm going to be using a pre-made design system, leaving behind Phosphorus. The reality is that I'd have to rebuild Phosphorus for React anyways, and I found a React-based system called <a href="https://mantine.dev/" target="_blank">Mantine</a> that offers an excellent ground to expand upon. I'll end up fairly heavily modding it to make it my own, but at the end of the day using a pre-made design engine comes after realising how much time and thought it takes to build a good system. I'll probably do a full post about this, but I think I've found a way to neatly integrate it into my new workflow. <br> <br>
+
+                As for the server side, I'm a bit undecided. Up until this point I've been using a Node/Express server that occasionally interacts with a PostgreSQL server, both of which were hosted on Heroku. The biggest issue with this flow is that I often ended up having to program functional and checking logic twice; once for the client and another for the server's exposed API endpoints. This did mean that I could interact with the server through different mediums, but it made development time slow and tedious. <br>
+                In truth, I'm not quite sure how React will handle database interaction and logic that I typically reserved for the server, and that will determine what I use. <br>
+                I'm also unsure if I'm going to stick with a a Postgres database as it doesn't mesh all too well with JSON, but a lot of my projects are well-established in using it, so I may keep it around.
+            </p>
+            
+            <h2>How am I handling this change?</h2>
+            <p>
+                The short answer: slowly. <br>
+                The long answer: as I need to. I currently have a lot of projects that I actively or occasionally work on, and I've been using my previous stack for long enough that it's going to be sticking around for a while. <br>
+                The current plan is to start any new projects using this stack, then as older projects need major updates, rewriting them to use it as necessary. This means large, old projects like Wolfram probably won't receive this treatment for a *very* long time (if ever); Wolfram Is in a practically complete state at the moment, and frankly I don't want to rebuild it *again*. <br> <br>
+
+                For static or mostly-static websites (such as this one), I'm going to stick with the current stack as introducing React simply over-complicates the process. At some point I'd like to remaster Phosphorus, focusing heavily on the site-helping features, but there's no set date for any of that at the moment.
+            </p>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer responsive-margin">
+            <p>
+                <a href="https://webdev.sheamgt.com/" target="_blank">
+                    This website was created using Phosphorus, my in-house web design engine. If you want a website just like this, I offer it as a service!
+                </a>
+            </p>
+            <a href="https://isaacshea.com/" target="_blank"><img src="../content/media/footer_image.png"></a>
+        </footer>
+    </body>
+</html>

@@ -9,6 +9,16 @@
         <title>Phosphorus • Building my own design system • Isaac Shea</title>
         <link rel="icon" href="../content/media/favicon.png">
 
+        <!-- GOOGLE ANALYTICS -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNM70EHFT2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-HNM70EHFT2');
+        </script>
+
         <!-- SOCIAL MEDIA -->
         <meta property="og:title" content="Phosphorus • Building my own design system • Isaac Shea">
         <meta property="og:description" content="Phosphorus is the culmination of everything I've learned about UI & UX since I started designing for computers half a decade ago. Here's how and why I built it.">
@@ -45,9 +55,18 @@
     </head> 
 
     <body onload="loadFramework();">
-    
+
+        <div class="cookie-consent responsive-margin" id="cookie-consent">
+            <div class="highlighter"></div>
+            <p>Hey! This website uses cookies for analytics.</p>
+            <div class="cookie-consent-buttons">
+                <a href="./why-use-cookies.html" class="button icon"><span class="material-icons-round">info</span></a>
+                <button class="button icon" onclick="destroyCookieConsent();"><span class="material-icons-round">close</span></button>
+            </div>
+        </div>
+
         <!-- NAV -->
-        <nav class="nav responsive" id="nav">
+        <nav class="nav responsive-margin" id="nav">
             <img src="../content/media/favicon.png">
                                  
             <div class="content-horizontal except become-mobile-sheet">
@@ -200,7 +219,7 @@
         </main>
 
         <!-- FOOTER -->
-        <footer class="footer responsive">
+        <footer class="footer responsive-margin">
             <p>
                 <a href="https://webdev.sheamgt.com/" target="_blank">
                     This website was created using Phosphorus, my in-house web design engine. If you want a website just like this, I offer it as a service!

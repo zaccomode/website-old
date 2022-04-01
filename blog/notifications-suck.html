@@ -9,6 +9,16 @@
         <title>Notifications suck - here's why • Isaac Shea</title>
         <link rel="icon" href="../content/media/favicon.png">
 
+        <!-- GOOGLE ANALYTICS -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNM70EHFT2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-HNM70EHFT2');
+        </script>
+
         <!-- SOCIAL MEDIA -->
         <meta property="og:title" content="Notifications suck - here's why • Isaac Shea">
         <meta property="og:description" content="How did I go from a die-hard believer in smartwatches to selling mine and never looking back? The foremost is notification stress.">
@@ -45,9 +55,18 @@
     </head> 
 
     <body onload="loadFramework();">
+
+        <div class="cookie-consent responsive-margin" id="cookie-consent">
+            <div class="highlighter"></div>
+            <p>Hey! This website uses cookies for analytics.</p>
+            <div class="cookie-consent-buttons">
+                <a href="./why-use-cookies.html" class="button icon"><span class="material-icons-round">info</span></a>
+                <button class="button icon" onclick="destroyCookieConsent();"><span class="material-icons-round">close</span></button>
+            </div>
+        </div>
     
         <!-- NAV -->
-        <nav class="nav responsive" id="nav">
+        <nav class="nav responsive-margin" id="nav">
             <img src="../content/media/favicon.png">
                                  
             <div class="content-horizontal except become-mobile-sheet">
@@ -111,7 +130,7 @@
             <h2>Some further reading</h2>
             <ul>
                 <li>
-                    <a href="https://www.androidpolice.com/2017/12/22/switching-iphone-part-three-everything-hate-iphone-x/" target="_blank"><b>Switching to the iPhone, part three: Everything I hate abouve the iPhone X</b> by David Ruddock</a> - The section talking about notifications pretty much encapsulates exactly how I feel about the topic, although this talks about it more from a usability standpoint than an experiential standpoint.
+                    <a href="https://www.androidpolice.com/2017/12/22/switching-iphone-part-three-everything-hate-iphone-x/" target="_blank"><b>Switching to the iPhone, part three: Everything I hate about the iPhone X</b> by David Ruddock</a> - The section talking about notifications pretty much encapsulates exactly how I feel about the topic, although this talks about it more from a usability standpoint than an experiential standpoint.
                 </li>
                 <li>
                     <a href="https://feeldoppel.com/blogs/news/notifications-are-stressful-how-to-beat-phone-stress" target="_blank"><b>Notifications are Stressful - How To Beat Phone Stress</b> by Feel Doppel</a> - An interesting article about the effect that notifications can have on our mental health.
@@ -120,7 +139,7 @@
         </main>
 
         <!-- FOOTER -->
-        <footer class="footer responsive">
+        <footer class="footer responsive-margin">
             <p>
                 <a href="https://webdev.sheamgt.com/" target="_blank">
                     This website was created using Phosphorus, my in-house web design engine. If you want a website just like this, I offer it as a service!

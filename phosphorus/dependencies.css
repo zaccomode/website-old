@@ -38,11 +38,6 @@
         --tertiaryLight: #cacaca;
     }
 }
-@media screen and (max-width: 1000px) {
-    :root {
-        --cornerRounding: 10px;
-    }
-}
 
 
 /* -- OTHER VARIABLES -- */

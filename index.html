@@ -9,6 +9,16 @@
         <title>Isaac Shea • Overcomplicating Simple Things</title>
         <link rel="icon" href="./content/media/favicon.png">
 
+        <!-- GOOGLE ANALYTICS -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HNM70EHFT2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-HNM70EHFT2');
+        </script>
+
         <!-- SOCIAL MEDIA -->
         <meta property="og:title" content="Isaac Shea • Overcomplicating Simple Things">
         <meta property="og:description" content="I'm Isaac Shea, a Brisbane-based IT & IxD student at QUT. I've been making content on the internet since 2015, experimenting with game development, brand design and full-stack development.">
@@ -47,8 +57,17 @@
 
     <body onload="loadFramework(); loadCarousels(); loadInstagram();">
     
+        <div class="cookie-consent responsive-margin" id="cookie-consent">
+            <div class="highlighter"></div>
+            <p>Hey! This website uses cookies for analytics.</p>
+            <div class="cookie-consent-buttons">
+                <a href="./blog/why-use-cookies.html" class="button icon"><span class="material-icons-round">info</span></a>
+                <button class="button icon" onclick="destroyCookieConsent();"><span class="material-icons-round">close</span></button>
+            </div>
+        </div>
+
         <!-- NAV -->
-        <nav class="nav responsive" id="nav">
+        <nav class="nav responsive-margin" id="nav">
             <img src="./content/media/favicon.png">
                                  
             <div class="content-horizontal except become-mobile-sheet">
@@ -103,7 +122,7 @@
                         <div class="contact-row">
                             <span class="material-icons-round">school</span>
                             <div class="content-vertical">
-                                <p class="subtitle">Bachelor of IT & Bachelor of Design (Interaction) & QUT</p>
+                                <p class="subtitle">Bachelor of IT & Bachelor of Design (Interaction) @ QUT</p>
                             </div>
                         </div>
                     </div>
@@ -211,7 +230,18 @@
             <!-- WHAT I'VE WRITTEN -->
             <h1>What I've written</h1>
             <div class="content-grid">
-                <a class="grid-item" href="./blog/notifications-suck.html" target="_blank">
+                <a class="grid-item" href="./blog/changing-tech-stack.html">
+                    <img src="./content/media/blog/changing_tech_stacks_1.png">
+                    <div class="grid-content">
+                        <h3>Why I'm changing my tech stack</h3>
+                        <h4>22.03.2022</h4>
+                        <p>
+                            I started to seriously teach myself web design about three years ago now, and this year I'm once again reinventing my development stack to use a JavaScript-first approach.
+                        </p>
+                    </div>
+                </a>
+
+                <a class="grid-item" href="./blog/notifications-suck.html">
                     <img src="./content/media/blog/notifications_suck_1.png">
                     <div class="grid-content">
                         <h3>Notifications suck - here's why</h3>
@@ -222,24 +252,13 @@
                     </div>
                 </a>
 
-                <a class="grid-item" href="./blog/light-or-dark-theme.html" target="_blank">
+                <a class="grid-item" href="./blog/light-or-dark-theme.html">
                     <img src="./content/media/blog/light_or_dark_theme_1.png">
                     <div class="grid-content">
                         <h3>Light vs. dark theme: which is better?</h3>
                         <h4>25.01.2022</h4>
                         <p>
                             I've seen many debates as to which theme is the 'superior', and which should be designed for. Let's break down the psychology of each to see which your application should use.
-                        </p>
-                    </div>
-                </a>
-
-                <a class="grid-item" href="./blog/design-for-stupid-people.html" target="_blank">
-                    <img src="./content/media/blog/design_for_stupid_people_1.png">
-                    <div class="grid-content">
-                        <h3>Why we should design for stupid people</h3>
-                        <h4>08.01.2022</h4>
-                        <p>
-                            Designing for 'stupid people' isn't about designing for literally stupid people: it's about designing something so that regular people can still use what we design if they aren't on the ball that day.
                         </p>
                     </div>
                 </a>
@@ -258,7 +277,7 @@
         </main>
 
         <!-- FOOTER -->
-        <footer class="footer responsive">
+        <footer class="footer responsive-margin">
             <p>
                 <a href="https://webdev.sheamgt.com/" target="_blank">
                     This website was created using Phosphorus, my in-house web design engine. If you want a website just like this, I offer it as a service!

@@ -337,3 +337,39 @@
     -webkit-line-clamp: 4; /* number of lines to show */
     -webkit-box-orient: vertical;
 }
+
+
+
+/* COOKIE CONSENT ------------------------------------- */
+.cookie-consent {
+    display: none;
+    align-items: center;
+    justify-content: stretch;
+    
+    background-color: var(--tertiary25);
+    border-radius: var(--cornerRounding);
+    margin-top: 10px;
+
+    padding: 5px;
+}
+.cookie-consent.show { 
+    display: flex;
+}
+.cookie-consent .highlighter { 
+    height: 40px;
+    width: 2px;
+
+    margin-left: 5px;
+    background-color: var(--secondary);
+}
+.cookie-consent p { 
+    flex-grow: 1;
+    margin: 0px 0px 0px 10px;
+}
+
+.cookie-consent-buttons { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}

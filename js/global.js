@@ -146,3 +146,24 @@ class Ph_Carousel {
         }, this.autoPlayDelay);
     }
 }
+
+
+
+// COOKIE CONSENT ---------------------------------------------
+document.onreadystatechange = () => {
+    if (document.readyState === 'complete') {
+        const isCookiesConsent = localStorage.getItem('isCookiesConsent') || false;
+
+        if (isCookiesConsent === 'true') { 
+            destroyCookieConsent();
+        } else { 
+            document.getElementById('cookie-consent').classList.add('show');
+            localStorage.setItem('isCookiesConsent', true);
+        }
+    }
+}
+
+function destroyCookieConsent() { 
+    const cookieConsent = document.getElementById('cookie-consent');
+    cookieConsent.parentNode.removeChild(cookieConsent);
+}
